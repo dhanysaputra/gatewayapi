@@ -884,6 +884,11 @@
 				"tags": [
 					"devices"
 				],
+				"security": [
+					{
+						"bearerAuth": []
+					}
+				],
 				"parameters": [
 					{
 						"name": "mui",
