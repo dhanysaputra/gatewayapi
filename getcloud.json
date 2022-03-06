@@ -3,7 +3,7 @@
   "info": {
     "version": "1.1.0",
     "title": "Gateway API Specification",
-    "description": "This is an API v1.1.0 specification for GET Cloud that allows devices to obtain existing information on GET Cloud and and submit data to GET Cloud.",
+    "description": "This is an API specification that allows devices to upload data to GET Cloud and obtain existing information on GET Cloud.",
     "termsOfService": "https://docs.micropower-group.com/#!doc/topic:GET_User_Terms_and_conditions",
     "contact": {
       "name": "Micropower Group",
@@ -18,6 +18,9 @@
       "name": "devices"
     },
     {
+      "name": "bms"
+    },
+    {
       "name": "pings"
     },
     {
@@ -26,10 +29,241 @@
   ],
   "servers": [
     {
-      "url": "https://get-cloud.azurewebsites.net/api/"
+      "url": "https://get-cloud.azurewebsites.net/api/v1/"
     }
   ],
   "paths": {
+    "/devices/{mui}/logs/history/indexes": {
+      "get": {
+        "tags": [
+          "indexes"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "562959144425069",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get indexes of existing history logs",
+        "responses": {
+          "200": {
+            "description": "Successfully getting the indexes of history log.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseIndexSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/instant/indexes": {
+      "get": {
+        "tags": [
+          "indexes"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "562959144425069",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get indexes of existing instant logs",
+        "responses": {
+          "200": {
+            "description": "Successfully getting the indexes of instant log.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseIndexSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/event/indexes": {
+      "get": {
+        "tags": [
+          "indexes"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "562959144425069",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get indexes of existing event logs",
+        "responses": {
+          "200": {
+            "description": "Successfully getting the event of instant log.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseIndexSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/gateway/software/versions": {
       "get": {
         "tags": [
@@ -304,237 +538,6 @@
         }
       }
     },
-    "/devices/{mui}/logs/history": {
-      "get": {
-        "tags": [
-          "indexes"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "mui",
-            "in": "path",
-            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
-            "example": "562959144425069",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Get indexes of existing history logs",
-        "responses": {
-          "200": {
-            "description": "Successfully getting the indexes of history log.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseIndexSchema"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "BadRequest",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BadRequest"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/devices/{mui}/logs/instant": {
-      "get": {
-        "tags": [
-          "indexes"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "mui",
-            "in": "path",
-            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
-            "example": "562959144425069",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Get indexes of existing instant logs",
-        "responses": {
-          "200": {
-            "description": "Successfully getting the indexes of instant log.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseIndexSchema"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "BadRequest",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BadRequest"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/devices/{mui}/logs/event": {
-      "get": {
-        "tags": [
-          "indexes"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "mui",
-            "in": "path",
-            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
-            "example": "562959144425069",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Get indexes of existing event logs",
-        "responses": {
-          "200": {
-            "description": "Successfully getting the event of instant log.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseIndexSchema"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "BadRequest",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/BadRequest"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/devices/{mui}/status": {
       "post": {
         "tags": [
@@ -589,7 +592,7 @@
             }
           }
         },
-        "summary": "Upload status logs for charger or BMU",
+        "summary": "Upload status logs",
         "responses": {
           "200": {
             "description": "Successfully uploading the status log of the selected device.",
@@ -685,7 +688,7 @@
             }
           }
         ],
-        "summary": "Get the last reported status for a certain device",
+        "summary": "Get the latest status logs",
         "responses": {
           "200": {
             "description": "Successfully showing the status of the given device visible for the logged in user.",
@@ -773,7 +776,7 @@
             }
           }
         ],
-        "summary": "Upload configuration for charger, BMU, or gateway",
+        "summary": "Upload config logs",
         "requestBody": {
           "description": "The set of valid configuration fields depends on the type of device, as documented on the latest<code>A00465</code>document, or see the \"Schema\" section.",
           "required": true,
@@ -902,7 +905,7 @@
           }
         ],
         "description": "Get the latest configuration of a device",
-        "summary": "Get the latest config log",
+        "summary": "Get the latest config logs",
         "responses": {
           "200": {
             "description": "Successfully showing the configuration of the given device visible for the logged in user.",
@@ -968,7 +971,7 @@
         }
       }
     },
-    "/devices/{mui}/history": {
+    "/devices/{mui}/logs/history": {
       "post": {
         "tags": [
           "devices"
@@ -1009,7 +1012,7 @@
             }
           }
         },
-        "summary": "Upload history logs for charger or BMU",
+        "summary": "Upload history logs",
         "responses": {
           "200": {
             "description": "Successfully uploading the history logs of the selected device.",
@@ -1072,7 +1075,7 @@
         }
       }
     },
-    "/devices/{mui}/event": {
+    "/devices/{mui}/logs/event": {
       "post": {
         "tags": [
           "devices"
@@ -1116,7 +1119,7 @@
             }
           }
         },
-        "summary": "Upload status logs for charger or BMU",
+        "summary": "Upload event logs",
         "responses": {
           "200": {
             "description": "Successfully uploading the event log of the selected device.",
@@ -1182,7 +1185,7 @@
         }
       }
     },
-    "/devices/{mui}/instant": {
+    "/devices/{mui}/logs/instant": {
       "post": {
         "tags": [
           "devices"
@@ -1223,7 +1226,7 @@
             }
           }
         },
-        "summary": "Upload status logs for charger or BMU",
+        "summary": "Upload instant logs",
         "responses": {
           "200": {
             "description": "Successfully uploading the instant log of the selected device.",
@@ -1239,6 +1242,710 @@
                   "Charger": {
                     "$ref": "#/components/examples/ResponseInstantChargerExample"
                   }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmscycle": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload cycle logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the cycle logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmsevent": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload event logs (BMS)",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the event logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmsprotective": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload protective logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the protective logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmstotals": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload totals logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the totals logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmsbatteryinfo": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload battery info logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the battery info logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmsapplicationinfo": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload application info logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the application info logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmshistogram": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload histogram logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the histogram logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "BadRequest",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BadRequest"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devices/{mui}/logs/bmsbrixmapping": {
+      "post": {
+        "tags": [
+          "bms"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "65084745308715986",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "The set of valid cycle log fields is documented on the latest<code>A03367</code>document, or see the \"Schema\" section.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CycleBMSSchema"
+              }
+            }
+          }
+        },
+        "summary": "Upload brix mapping logs",
+        "responses": {
+          "200": {
+            "description": "Successfully uploading the brix mapping logs of the selected BMS.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseCycleBMSSchema"
                 }
               }
             }
@@ -8301,6 +9008,249 @@
               {
                 "start": 290,
                 "end": 300
+              }
+            ]
+          }
+        }
+      },
+      "CycleBMSSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "dischargeStateOfChargeStart",
+              "dischargeBatteryTemperatureMax",
+              "dischargeBatteryTemperatureMin",
+              "dischargeAh",
+              "dischargeWh",
+              "dischargeRegeneratingTime",
+              "dischargeRegeneratedAh",
+              "dischargeRegeneratedWh",
+              "calculatedinportal",
+              "chargeStateOfChargeStart",
+              "chargeStateOfChargeEnd",
+              "chargeBatteryTemperatureMax",
+              "chargeBatteryTemperatureMin",
+              "chargeAh",
+              "chargeWh",
+              "dischargeTimeStartDays",
+              "dischargeTime",
+              "chargeTimeStartMs",
+              "chargeTimeStartDays",
+              "chargeType",
+              "notavailable",
+              "notavailable",
+              "notavailable"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            },
+            "example": [
+              {
+                "dischargeTimeStartMs": "2020-08-21 18:44:39",
+                "index": 1,
+                "bmsCycleIndex": 171,
+                "values": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  -17.77777777777778,
+                  -17.77777777777778,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  -17.22222222222222,
+                  -17.22222222222222,
+                  19,
+                  20,
+                  21
+                ]
+              },
+              {
+                "dischargeTimeStartMs": "2020-08-22 18:44:39",
+                "index": 2,
+                "bmsCycleIndex": 172,
+                "values": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  -17.77777777777778,
+                  -17.77777777777778,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  -17.22222222222222,
+                  -17.22222222222222,
+                  19,
+                  20,
+                  21
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "ResponseCycleBMSSchema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "dischargeStateOfChargeStart",
+              "dischargeBatteryTemperatureMax",
+              "dischargeBatteryTemperatureMin",
+              "dischargeAh",
+              "dischargeWh",
+              "dischargeRegeneratingTime",
+              "dischargeRegeneratedAh",
+              "dischargeRegeneratedWh",
+              "calculatedinportal",
+              "chargeStateOfChargeStart",
+              "chargeStateOfChargeEnd",
+              "chargeBatteryTemperatureMax",
+              "chargeBatteryTemperatureMin",
+              "chargeAh",
+              "chargeWh",
+              "dischargeTimeStartDays",
+              "dischargeTime",
+              "chargeTimeStartMs",
+              "chargeTimeStartDays",
+              "chargeType",
+              "notavailable",
+              "notavailable",
+              "notavailable"
+            ]
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "dischargeTimeStartMs": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Time when battery was disconnected in ms"
+                },
+                "index": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Index of the cycle log since start of operation"
+                },
+                "bmsCycleIndex": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "Cycle index BMS"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "type": "number"
+                      },
+                      {
+                        "type": "integer"
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "example": [
+              {
+                "dischargeTimeStartMs": "2020-08-21 18:44:39",
+                "index": 1,
+                "bmsCycleIndex": 171,
+                "values": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  -17.77777777777778,
+                  -17.77777777777778,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  -17.22222222222222,
+                  -17.22222222222222,
+                  19,
+                  20,
+                  21
+                ]
+              },
+              {
+                "dischargeTimeStartMs": "2020-08-22 18:44:39",
+                "index": 2,
+                "bmsCycleIndex": 172,
+                "values": [
+                  2,
+                  3,
+                  4,
+                  5,
+                  6,
+                  -17.77777777777778,
+                  -17.77777777777778,
+                  9,
+                  10,
+                  11,
+                  12,
+                  13,
+                  14,
+                  15,
+                  16,
+                  -17.22222222222222,
+                  -17.22222222222222,
+                  19,
+                  20,
+                  21
+                ]
               }
             ]
           }
