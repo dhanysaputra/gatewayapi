@@ -3716,14 +3716,14 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number;what kind of firmware is on the device [firmwareType]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
           },
           "39": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersion]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
           },
           "44": {
             "type": "integer",
@@ -3741,21 +3741,21 @@
           },
           "46": {
             "type": "number",
-            "description": "Measured battery current. [batteryCurrent] (multiplied by 1000)"
+            "description": "Measured battery current. [batteryCurrent] (divided by 0,001)"
           },
           "47": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Measured battery voltage. [batteryVoltage] (multiplied by 1000)"
+            "description": "Measured battery voltage. [batteryVoltage] (divided by 0,001)"
           },
           "48": {
             "type": "number",
-            "description": "Measured battery temperature. [batteryTemperature] (multiplied by 10)"
+            "description": "Measured battery temperature. [batteryTemperature] (divided by 0,1)"
           },
           "49": {
             "type": "number",
-            "description": "Average battery lifetime temperature. [batteryLifeTempAverage] (multiplied by 10)"
+            "description": "Average battery lifetime temperature. [batteryLifeTempAverage] (divided by 0,1)"
           },
           "50": {
             "type": "number",
@@ -3896,13 +3896,9 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest history log;logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
+            "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
           },
           "70": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
           },
           "71": {
@@ -3917,7 +3913,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest event log;logs are stored in a circular buffer [eventLogIndex]"
+            "description": "The index of the latest event log, logs are stored in a circular buffer [eventLogIndex]"
           },
           "73": {
             "type": "integer",
@@ -3931,19 +3927,19 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest instant log;logs are stored in a circular buffer [instantLogIndex]"
+            "description": "The index of the latest instant log, logs are stored in a circular buffer [instantLogIndex]"
           },
           "80": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The current middle voltage [middleVoltage] (multiplied by 1000)"
+            "description": "The current middle voltage [middleVoltage] (divided by 0,001)"
           },
           "81": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The current electrolyte voltage [electrolyteVoltage] (multiplied by 1000)"
+            "description": "The current electrolyte voltage [electrolyteVoltage] (divided by 0,001)"
           },
           "127": {
             "type": "array",
@@ -3958,10 +3954,6 @@
             "description": "Array of active alarm codes [activeAlarms]"
           },
           "128": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
           },
           "219": {
@@ -3985,7 +3977,7 @@
             "format": "int64",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Serial number of the device;8 bytes. MP serial numbers are 5 bytes. [notavailable]"
+            "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
           }
         },
         "required": [
@@ -4000,7 +3992,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Device numerical identification;configurable. [deviceID]"
+            "description": "Device numerical identification, configurable. [deviceID]"
           },
           "5": {
             "type": "integer",
@@ -4019,13 +4011,13 @@
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Current drained from the battery during charging. [baseLoad] (multiplied by 1000)"
+            "description": "Current drained from the battery during charging. [baseLoad] (divided by 0,001)"
           },
           "25": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Resistance in the cables between charger and battery. [cableResistance] (multiplied by 1000)"
+            "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0,001)"
           },
           "26": {
             "type": "integer",
@@ -4041,14 +4033,14 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number;what kind of firmware is on the device [firmwareType]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
           },
           "39": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersion]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
           },
           "45": {
             "type": "integer",
@@ -4116,13 +4108,9 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest history log;logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
+            "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
           },
           "70": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
           },
           "71": {
@@ -4137,7 +4125,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest event log;logs are stored in a circular buffer [eventLogIndex]"
+            "description": "The index of the latest event log, logs are stored in a circular buffer [eventLogIndex]"
           },
           "73": {
             "type": "integer",
@@ -4151,7 +4139,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The index of the latest instant log;logs are stored in a circular buffer [instantLogIndex]"
+            "description": "The index of the latest instant log, logs are stored in a circular buffer [instantLogIndex]"
           },
           "75": {
             "type": "integer",
@@ -4169,33 +4157,33 @@
           },
           "88": {
             "type": "number",
-            "description": "Momentary charger heat sink temperature. [chargerTemperature] (multiplied by 10)"
+            "description": "Momentary charger heat sink temperature. [chargerTemperature] (divided by 0,1)"
           },
           "90": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Momentary charger measured current. [chargerCurrent] (multiplied by 1000)"
+            "description": "Momentary charger measured current. [chargerCurrent] (divided by 0,001)"
           },
           "91": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Momentary charger measured voltage. [chargerVoltage] (multiplied by 1000)"
+            "description": "Momentary charger measured voltage. [chargerVoltage] (divided by 0,001)"
           },
           "93": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number;what kind of firmware is on the device [firmwareTypeRadio]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareTypeRadio]"
           },
           "94": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersionRadio]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersionRadio]"
           },
           "127": {
             "type": "array",
@@ -4210,10 +4198,6 @@
             "description": "Array of active alarm codes [activeAlarms]"
           },
           "128": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
           },
           "129": {
@@ -4225,11 +4209,11 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The version of the charging algorithm;can be NULL [algorithmVersion]"
+            "description": "The version of the charging algorithm, can be NULL [algorithmVersion]"
           },
           "217": {
             "type": "string",
-            "description": "The network restrictions as channel:pan ID ex 11:22; if all [networkRestriction]"
+            "description": "The network restrictions as \"channel:pan ID\" ex \"11:22\", \"\" if all [networkRestriction]"
           },
           "218": {
             "type": "integer",
@@ -4259,14 +4243,14 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Measured primary voltage [UAC_meas] (multiplied by 1000)"
+            "description": "Measured primary voltage [UAC_meas] (divided by 0,001)"
           },
           "389": {
             "type": "integer",
             "format": "int64",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Serial number of the device;8 bytes. MP serial numbers are 5 bytes. [notavailable]"
+            "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
           }
         },
         "required": [
@@ -4276,24 +4260,19 @@
       "StatusLogsGatewayUpload": {
         "type": "object",
         "properties": {
-          "10": {
-            "type": "integer",
-            "format": "int32",
-            "description": "Unique device serial number [serialNumber]"
-          },
           "38": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number;what kind of firmware is on the device [firmwareType]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
           },
           "39": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersion]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
           },
           "45": {
             "type": "integer",
@@ -4305,14 +4284,14 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number;what kind of firmware is on the device [firmwareTypeRadio]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareTypeRadio]"
           },
           "94": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersionRadio]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersionRadio]"
           },
           "96": {
             "type": "string",
@@ -4335,7 +4314,7 @@
             "format": "int64",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The free storage space [freeStorage] (in Mb)"
+            "description": "The free storage space [freeStorage])"
           },
           "105": {
             "type": "integer",
@@ -4394,6 +4373,13 @@
             "minimum": 0,
             "exclusiveMinimum": true,
             "description": "Root filesystem release [rootFsRelease]"
+          },
+          "389": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0,
+            "exclusiveMinimum": true,
+            "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
           }
         },
         "required": [
@@ -4408,7 +4394,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Device numerical identification;configurable. [deviceID]"
+            "description": "Device numerical identification, configurable. [deviceID]"
           },
           "2": {
             "type": "integer",
@@ -4462,7 +4448,7 @@
           "9": {
             "type": "integer",
             "format": "int32",
-            "description": "The amount of seconds between instant logs;0 = off [instantLogPeriod]"
+            "description": "The amount of seconds between instant logs, 0 = off [instantLogPeriod]"
           },
           "11": {
             "type": "boolean",
@@ -4539,13 +4525,13 @@
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Current drained from the battery during charging. [baseLoad] (multiplied by 1000)"
+            "description": "Current drained from the battery during charging. [baseLoad] (divided by 0,001)"
           },
           "25": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Resistance in the cables between charger and battery. [cableResistance] (multiplied by 1000)"
+            "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0,001)"
           },
           "26": {
             "type": "integer",
@@ -4562,7 +4548,7 @@
             "exclusiveMinimum": true,
             "maximum": 255,
             "exclusiveMaximum": true,
-            "description": "Limit for voltage balance calculation [voltageBalanceLimit] (multiplied by 100)"
+            "description": "Limit for voltage balance calculation [voltageBalanceLimit] (divided by 0,01)"
           },
           "28": {
             "type": "boolean",
@@ -4659,7 +4645,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Device numerical identification;configurable. [deviceID]"
+            "description": "Device numerical identification, configurable. [deviceID]"
           },
           "2": {
             "type": "integer",
@@ -4686,7 +4672,7 @@
           "9": {
             "type": "integer",
             "format": "int32",
-            "description": "The amount of seconds between instant logs;0 = off [instantLogPeriod]"
+            "description": "The amount of seconds between instant logs, 0 = off [instantLogPeriod]"
           },
           "18": {
             "type": "integer",
@@ -4706,13 +4692,13 @@
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Current drained from the battery during charging. [baseLoad] (multiplied by 1000)"
+            "description": "Current drained from the battery during charging. [baseLoad] (divided by 0,001)"
           },
           "25": {
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Resistance in the cables between charger and battery. [cableResistance] (multiplied by 1000)"
+            "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0,001)"
           },
           "26": {
             "type": "integer",
@@ -4826,7 +4812,7 @@
             "description": "If time restrictions shall be enabled [timeRestriction]"
           },
           "79": {
-            "description": "A list of all charging restrictions;limited to 3 charging restrictions per day [chargingRestrictions]"
+            "description": "A list of all charging restrictions, limited to 3 charging restrictions per day [chargingRestrictions]"
           },
           "84": {
             "type": "integer",
@@ -4844,14 +4830,14 @@
             "exclusiveMinimum": true,
             "maximum": 1,
             "exclusiveMaximum": true,
-            "description": "Remote out;relay active criteria for BBC [remoteOutBbcVar]"
+            "description": "Remote out, relay active criteria for BBC [remoteOutBbcVar]"
           },
           "97": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Configuration for selected engine code;from a list of engines [engineCode]"
+            "description": "Configuration for selected engine code, from a list of engines [engineCode]"
           },
           "98": {
             "type": "number",
@@ -4878,17 +4864,9 @@
             "description": "Power group [powerGroup]"
           },
           "223": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "Mains current limit [mainsCurrentLimit])"
           },
           "224": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
             "description": "Mains power limit [mainsPowerLimit])"
           },
           "226": {
@@ -4898,7 +4876,7 @@
             "exclusiveMinimum": true,
             "maximum": 100,
             "exclusiveMaximum": true,
-            "description": "Charging voltage limit (mV) [chargingVoltageLimit] (multiplied by 1000)"
+            "description": "Charging voltage limit (mV) [chargingVoltageLimit] (divided by 0,001)"
           },
           "227": {
             "type": "integer",
@@ -5128,7 +5106,7 @@
             "exclusiveMinimum": true,
             "maximum": 6,
             "exclusiveMaximum": true,
-            "description": "Extracharge;day [extraChargeVar]"
+            "description": "Extracharge, day [extraChargeVar]"
           },
           "261": {
             "type": "integer",
@@ -5137,7 +5115,7 @@
             "exclusiveMinimum": true,
             "maximum": 23,
             "exclusiveMaximum": true,
-            "description": "Extracharge;hour [extraChargeVar2]"
+            "description": "Extracharge, hour [extraChargeVar2]"
           },
           "262": {
             "type": "integer",
@@ -5146,7 +5124,7 @@
             "exclusiveMinimum": true,
             "maximum": 59,
             "exclusiveMaximum": true,
-            "description": "Extracharge;minute [extraChargeVar3]"
+            "description": "Extracharge, minute [extraChargeVar3]"
           },
           "263": {
             "type": "integer",
@@ -5201,7 +5179,7 @@
           },
           "272": {
             "type": "number",
-            "description": "Default battery temperature to be used when no real battery temperature is measured [batteryTemperatureDefault] (multiplied by 10)"
+            "description": "Default battery temperature to be used when no real battery temperature is measured [batteryTemperatureDefault] (divided by 0,1)"
           },
           "275": {
             "type": "boolean",
@@ -5214,7 +5192,7 @@
             "exclusiveMinimum": true,
             "maximum": 1,
             "exclusiveMaximum": true,
-            "description": "0 = Off;1= On [notavailable]"
+            "description": "0 = Off, 1= On [notavailable]"
           }
         }
       },
@@ -5226,7 +5204,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Device numerical identification;configurable. [deviceID]"
+            "description": "Device numerical identification, configurable. [deviceID]"
           },
           "19": {
             "type": "integer",
@@ -5256,28 +5234,28 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The scan for nodes interval [scanNetworkInterval] (in ms)"
+            "description": "The scan for nodes interval [scanNetworkInterval])"
           },
           "114": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The collect data minimum interval [collectDataMinInterval] (in ms)"
+            "description": "The collect data minimum interval [collectDataMinInterval])"
           },
           "115": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The collect data maximum interval [collectDataMaxInterval] (in ms)"
+            "description": "The collect data maximum interval [collectDataMaxInterval])"
           },
           "116": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The periodic update interval [periodicUpdateInterval] (in ms)"
+            "description": "The periodic update interval [periodicUpdateInterval])"
           },
           "124": {
             "type": "boolean",
@@ -5326,7 +5304,7 @@
           },
           "217": {
             "type": "string",
-            "description": "The network restrictions as channel:pan ID ex 11:22; if all [networkRestriction]"
+            "description": "The network restrictions as \"channel:pan ID\" ex \"11:22\", \"\" if all [networkRestriction]"
           },
           "219": {
             "type": "string",
@@ -5334,14 +5312,14 @@
           },
           "225": {
             "type": "string",
-            "description": "The node restrictions;the node to be focused on; if all [nodeRestriction]"
+            "description": "The node restrictions, the node to be focused on, \"\" if all [nodeRestriction]"
           },
           "247": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "CAN bus speed in bits per second [canBitRate] (in bps)"
+            "description": "CAN bus speed in bits per second [canBitRate])"
           }
         }
       },
@@ -5353,7 +5331,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm;can be NULL [algorithmVersion]\n  * `133` - The start time of discharge in POSIX format;seconds since 1 Januari 1970 with local time offset [dischargeTimeStart]\n  * `134` - The end time of discharge in POSIX format;seconds since 1 Januari 1970 with local time offset [dischargeTimeEnd]\n  * `138` - Battery cell voltage;60-90s before entering the discharge state. [dischargeVpcStart]\n  * `139` - Battery cell voltage;60-90s before entering charge state. [dischargeVpcEnd]\n  * `140` - Minimum battery voltage per cell during discharge. [dischargeVpcMin]\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `142` - State of charge at end of discharge. [dischargeStateOfChargeEnd]\n  * `143` - Battery temperature at discharge start time. [dischargeBatteryTemperatureStart]\n  * `144` - Battery temperature at charge start time. [dischargeBatteryTemperatureEnd]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `149` - Ah discharged when current > 25 % of Battery capacity. [dischargeAhI25]\n  * `150` - Discharge time when current > 25 % of Battery capacity. [dischargeTimeI25]\n  * `151` - Ah discharged when 25% ≥ I > 15% of Battery capacity. [dischargeAhI15]\n  * `152` - Discharge time when 25% ≥ I > 15 % of Battery capacity. [dischargeTimeI15]\n  * `153` - Ah discharged when 15% ≥ I > 0% of Battery capacity [dischargeAhI0]\n  * `154` - Discharge time when 15% ≥ I > 0 % of Battery capacity. [dischargeTimeI0]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `159` - The maximum current during discharge. [dischargeCurrentMax]\n  * `160` - Start datetime of charging in POSIX format;seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format;seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage;60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage;60-90s before entering discharge state. [chargeVpcEnd]\n  * `167` - Maximum voltage per cell during charge. [chargeVpcMax]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `170` - Battery temperature at Charge start time. [chargeBatteryTemperatureStart]\n  * `171` - Battery temperature at Charge end time. [chargeBatteryTemperatureEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `176` - Ah charged when current > 25 % of capacity. [chargeAhI25]\n  * `177` - Charge time when current > 25 % of capacity. [chargeTimeI25]\n  * `178` - Ah charged when 25% ≥ I > 15% of capacity. [chargeAhI15]\n  * `179` - Charge time when 25% ≥ I > 15 % of capacity. [chargeTimeI15]\n  * `180` - Ah charged when 15% ≥ I > 0% of capacity. [chargeAhI0]\n  * `181` - Charge time when 15% ≥ I > 0 % of capacity. [chargeTimeI0]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `186` - Maximum current measured during charge. [chargeCurrentMax]\n  * `187` - Index of the history;event or instant log since start of operation. [index]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `5` - Number of cells of the battery [cells]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm, can be NULL [algorithmVersion]\n  * `133` - The start time of discharge in POSIX format, seconds since 1 Januari 1970 with local time offset [dischargeTimeStart]\n  * `134` - The end time of discharge in POSIX format, seconds since 1 Januari 1970 with local time offset [dischargeTimeEnd]\n  * `138` - Battery cell voltage, 60-90s before entering the discharge state. [dischargeVpcStart]\n  * `139` - Battery cell voltage, 60-90s before entering charge state. [dischargeVpcEnd]\n  * `140` - Minimum battery voltage per cell during discharge. [dischargeVpcMin]\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `142` - State of charge at end of discharge. [dischargeStateOfChargeEnd]\n  * `143` - Battery temperature at discharge start time. [dischargeBatteryTemperatureStart]\n  * `144` - Battery temperature at charge start time. [dischargeBatteryTemperatureEnd]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `149` - Ah discharged when current > 25 % of Battery capacity. [dischargeAhI25]\n  * `150` - Discharge time when current > 25 % of Battery capacity. [dischargeTimeI25]\n  * `151` - Ah discharged when 25% ≥ I > 15% of Battery capacity. [dischargeAhI15]\n  * `152` - Discharge time when 25% ≥ I > 15 % of Battery capacity. [dischargeTimeI15]\n  * `153` - Ah discharged when 15% ≥ I > 0% of Battery capacity [dischargeAhI0]\n  * `154` - Discharge time when 15% ≥ I > 0 % of Battery capacity. [dischargeTimeI0]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `159` - The maximum current during discharge. [dischargeCurrentMax]\n  * `160` - Start datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `167` - Maximum voltage per cell during charge. [chargeVpcMax]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `170` - Battery temperature at Charge start time. [chargeBatteryTemperatureStart]\n  * `171` - Battery temperature at Charge end time. [chargeBatteryTemperatureEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `176` - Ah charged when current > 25 % of capacity. [chargeAhI25]\n  * `177` - Charge time when current > 25 % of capacity. [chargeTimeI25]\n  * `178` - Ah charged when 25% ≥ I > 15% of capacity. [chargeAhI15]\n  * `179` - Charge time when 25% ≥ I > 15 % of capacity. [chargeTimeI15]\n  * `180` - Ah charged when 15% ≥ I > 0% of capacity. [chargeAhI0]\n  * `181` - Charge time when 15% ≥ I > 0 % of capacity. [chargeTimeI0]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `186` - Maximum current measured during charge. [chargeCurrentMax]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `5` - Number of cells of the battery [cells]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
             },
             "example": [
               127,
@@ -5419,7 +5397,7 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `133` [dischargeTimeStart] - INT32 [0 - ∞])\n  * `134` [dischargeTimeEnd] - INT32 [0 - ∞])\n  * `138` [dischargeVpcStart] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `139` [dischargeVpcEnd] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `140` [dischargeVpcMin] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `142` [dischargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `143` [dischargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `144` [dischargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `149` [dischargeAhI25] - INT32 [0 - ∞])\n  * `150` [dischargeTimeI25] - INT32 [0 - ∞])\n  * `151` [dischargeAhI15] - INT32 [0 - ∞])\n  * `152` [dischargeTimeI15] - INT32 [0 - ∞])\n  * `153` [dischargeAhI0] - INT32 [0 - ∞])\n  * `154` [dischargeTimeI0] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `159` [dischargeCurrentMax] - DOUBLE [0 - ∞])\n  * `160` [chargeTimeStart] - INT32 [0 - ∞])\n  * `161` [chargeTimeEnd] - INT32 [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `167` [chargeVpcMax] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `170` [chargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `171` [chargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (multiplied by 10)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `176` [chargeAhI25] - INT32 [0 - ∞])\n  * `177` [chargeTimeI25] - INT32 [0 - ∞])\n  * `178` [chargeAhI15] - INT32 [0 - ∞])\n  * `179` [chargeTimeI15] - INT32 [0 - ∞])\n  * `180` [chargeAhI0] - INT32 [0 - ∞])\n  * `181` [chargeTimeI0] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `186` [chargeCurrentMax] - DOUBLE [0 - ∞] (multiplied by 10)\n  * `187` [index] - INT32 [0 - ∞]\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (multiplied by 1000)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (multiplied by 1000)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `5` [cells] - INT32 [0 - ∞]\n  * `6` [capacity] - DOUBLE [0 - ∞])\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `133` [dischargeTimeStart] - DATETIME [0 - ∞])\n  * `134` [dischargeTimeEnd] - DATETIME [0 - ∞])\n  * `138` [dischargeVpcStart] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `139` [dischargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `140` [dischargeVpcMin] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `142` [dischargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `143` [dischargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `144` [dischargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `149` [dischargeAhI25] - INT32 [0 - ∞])\n  * `150` [dischargeTimeI25] - INT32 [0 - ∞])\n  * `151` [dischargeAhI15] - INT32 [0 - ∞])\n  * `152` [dischargeTimeI15] - INT32 [0 - ∞])\n  * `153` [dischargeAhI0] - INT32 [0 - ∞])\n  * `154` [dischargeTimeI0] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `159` [dischargeCurrentMax] - DOUBLE [0 - ∞])\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `167` [chargeVpcMax] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `170` [chargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `171` [chargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0,1)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `176` [chargeAhI25] - INT32 [0 - ∞])\n  * `177` [chargeTimeI25] - INT32 [0 - ∞])\n  * `178` [chargeAhI15] - INT32 [0 - ∞])\n  * `179` [chargeTimeI15] - INT32 [0 - ∞])\n  * `180` [chargeAhI0] - INT32 [0 - ∞])\n  * `181` [chargeTimeI0] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `186` [chargeCurrentMax] - DOUBLE [0 - ∞] (divided by 0,1)\n  * `187` [index] - INT32 [0 - ∞]\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0,001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0,001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `5` [cells] - INT32 [0 - ∞]\n  * `6` [capacity] - DOUBLE [0 - ∞])\n",
                 "oneOf": [
                   {
                     "type": "string"
@@ -5457,7 +5435,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `1` - Device numerical identification;configurable. [deviceID]\n  * `118` - Charged Ah in % of total capacity in main stage [chargeAhP]\n  * `119` - Forklift ID [forkLiftId]\n  * `120` - Battery serial number [batterySerialNumber]\n  * `121` -  [reserved]\n  * `123` - The mode that charger will use to charge the battery [chargingMode]\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm;can be NULL [algorithmVersion]\n  * `160` - Start datetime of charging in POSIX format;seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format;seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage;60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage;60-90s before entering discharge state. [chargeVpcEnd]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `187` - Index of the history;event or instant log since start of operation. [index]\n  * `2` - Type of battery [batteryType]\n  * `203` - Charger temperature when battery connected before start of charging. [chargerTemperatureStart]\n  * `204` - Charger temperature when battery disconnected. [chargerTemperatureEnd]\n  * `205` - Maximum charger temperature between charge start time and charge end time. [chargerTemperatureMax]\n  * `207` - Event log index at start of charge [eventIndexStart]\n  * `208` - Event log index at end of charge [eventIndexEnd]\n  * `210` - Time when charger ouput power is turned on. [chargeTime]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `389` - Serial number of the device;8 bytes. MP serial numbers are 5 bytes. [notavailable]\n  * `416` - Max power during charge. [LogPeakPower]\n  * `417` - Consumed mains power. [LogConsumedKWh]\n  * `5` - Number of cells of the battery [cells]\n  * `50` - Calculated actual battery capacity. [actualCapacity]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `1` - Device numerical identification, configurable. [deviceID]\n  * `118` - Charged Ah in % of total capacity in main stage [chargeAhP]\n  * `119` - Forklift ID [forkLiftId]\n  * `120` - Battery serial number [batterySerialNumber]\n  * `121` -  [reserved]\n  * `123` - The mode that charger will use to charge the battery [chargingMode]\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm, can be NULL [algorithmVersion]\n  * `160` - Start datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `2` - Type of battery [batteryType]\n  * `203` - Charger temperature when battery connected before start of charging. [chargerTemperatureStart]\n  * `204` - Charger temperature when battery disconnected. [chargerTemperatureEnd]\n  * `205` - Maximum charger temperature between charge start time and charge end time. [chargerTemperatureMax]\n  * `207` - Event log index at start of charge [eventIndexStart]\n  * `208` - Event log index at end of charge [eventIndexEnd]\n  * `210` - Time when charger ouput power is turned on. [chargeTime]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `389` - Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]\n  * `416` - Max power during charge. [LogPeakPower]\n  * `417` - Consumed mains power. [LogConsumedKWh]\n  * `5` - Number of cells of the battery [cells]\n  * `50` - Calculated actual battery capacity. [actualCapacity]\n"
             },
             "example": [
               1,
@@ -5502,7 +5480,7 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `1` [deviceID] - INT32 [0 - ∞]\n  * `118` [chargeAhP] - INT32 [0 - ∞])\n  * `119` [forkLiftId] - INT32 [0 - ∞]\n  * `120` [batterySerialNumber] - INT64 [0 - ∞]\n  * `121` [reserved] -  [∞ - ∞]\n  * `123` [chargingMode] - INT32 [0 - 4]\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `160` [chargeTimeStart] - INT32 [0 - ∞])\n  * `161` [chargeTimeEnd] - INT32 [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (multiplied by 100)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `187` [index] - INT32 [0 - ∞]\n  * `2` [batteryType] - INT32 [0 - 1]\n  * `203` [chargerTemperatureStart] - DOUBLE [∞ - ∞])\n  * `204` [chargerTemperatureEnd] - DOUBLE [∞ - ∞])\n  * `205` [chargerTemperatureMax] - DOUBLE [∞ - ∞])\n  * `207` [eventIndexStart] - INT32 [0 - ∞]\n  * `208` [eventIndexEnd] - INT32 [0 - ∞]\n  * `210` [chargeTime] - INT32 [0 - ∞])\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (multiplied by 1000)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (multiplied by 1000)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `389` [notavailable] - INT64 [0 - ∞]\n  * `416` [LogPeakPower] - INT32 [0 - ∞] (multiplied by 10)\n  * `417` [LogConsumedKWh] - INT32 [0 - ∞])\n  * `5` [cells] - INT32 [0 - ∞]\n  * `50` [actualCapacity] - DOUBLE [0 - ∞])\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `1` [deviceID] - INT32 [0 - ∞]\n  * `118` [chargeAhP] - INT32 [0 - ∞])\n  * `119` [forkLiftId] - INT32 [0 - ∞]\n  * `120` [batterySerialNumber] - INT64 [0 - ∞]\n  * `121` [reserved] -  [∞ - ∞]\n  * `123` [chargingMode] - INT32 [0 - 4]\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0,01)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `187` [index] - INT32 [0 - ∞]\n  * `2` [batteryType] - INT32 [0 - 1]\n  * `203` [chargerTemperatureStart] - DOUBLE [∞ - ∞])\n  * `204` [chargerTemperatureEnd] - DOUBLE [∞ - ∞])\n  * `205` [chargerTemperatureMax] - DOUBLE [∞ - ∞])\n  * `207` [eventIndexStart] - INT32 [0 - ∞]\n  * `208` [eventIndexEnd] - INT32 [0 - ∞]\n  * `210` [chargeTime] - INT32 [0 - ∞])\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0,001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0,001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `389` [notavailable] - INT64 [0 - ∞]\n  * `416` [LogPeakPower] - INT32 [0 - ∞] (divided by 0,1)\n  * `417` [LogConsumedKWh] - INT32 [0 - ∞])\n  * `5` [cells] - INT32 [0 - ∞]\n  * `50` [actualCapacity] - DOUBLE [0 - ∞])\n",
                 "oneOf": [
                   {
                     "type": "string"
@@ -9067,7 +9045,7 @@
             "type": "integer",
             "format": "int32",
             "description": "Real time when log was written [timestamp]",
-            "example": 100000
+            "example": 1206921600
           },
           "514": {
             "type": "integer",
@@ -9158,7 +9136,7 @@
                 "type": "integer",
                 "format": "int32",
                 "description": "Real time when log was written [timestamp]",
-                "example": 100000
+                "example": 1206921600
               },
               "514": {
                 "type": "integer",
@@ -9228,14 +9206,6 @@
             "minimum": 0,
             "exclusiveMinimum": true,
             "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]",
-            "example": 0
-          },
-          "187": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
-            "description": "Index of the history, event or instant log since start of operation. [index]",
             "example": 0
           },
           "450": {
@@ -9578,7 +9548,7 @@
             "type": "integer",
             "format": "int32",
             "description": "Real time when log was written [timestamp]",
-            "example": 100000
+            "example": 1206921600
           }
         }
       },
@@ -9620,14 +9590,6 @@
                 "minimum": 0,
                 "exclusiveMinimum": true,
                 "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]",
-                "example": 0
-              },
-              "187": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "Index of the history, event or instant log since start of operation. [index]",
                 "example": 0
               },
               "450": {
@@ -9970,7 +9932,7 @@
                 "type": "integer",
                 "format": "int32",
                 "description": "Real time when log was written [timestamp]",
-                "example": 100000
+                "example": 1206921600
               }
             }
           }
@@ -10021,7 +9983,7 @@
             "type": "integer",
             "format": "int32",
             "description": "Real time when log was written [timestamp]",
-            "example": 1000000
+            "example": 1206921600
           }
         }
       },
@@ -10078,7 +10040,7 @@
                 "type": "integer",
                 "format": "int32",
                 "description": "Real time when log was written [timestamp]",
-                "example": 1000000
+                "example": 1206921600
               }
             }
           }
@@ -10092,7 +10054,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `499` - Real time when log was written [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n  * `529` - BMS axis type [bmsAxisType]\n  * `530` - BMS minimum [bmsMinimum]\n  * `531` - BMS maximum [bmsMaximum]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n  * `529` - BMS axis type [bmsAxisType]\n"
             },
             "example": [
               187,
@@ -10112,7 +10074,7 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `187` [index] - INT32 [0 - ∞]\n  * `499` [timestamp] - INT32 [∞ - ∞]\n  * `520` [bmsHistogram] - INT32[] [∞ - ∞]\n  * `521` [bmsHistogramType] - INT32[] [∞ - ∞]\n  * `529` [bmsAxisType] - INT32 [∞ - ∞]\n  * `530` [bmsMinimum] - INT32 [∞ - ∞]\n  * `531` [bmsMaximum] - INT32 [∞ - ∞]\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - INT32 [∞ - ∞]\n  * `520` [bmsHistogram] - INT32[] [∞ - ∞]\n  * `521` [bmsHistogramType] - INT32[] [∞ - ∞]\n  * `529` [bmsAxisType] - INT32 [∞ - ∞]\n",
                 "oneOf": [
                   {
                     "type": "integer"
@@ -10124,207 +10086,195 @@
                       "format": "int32"
                     }
                   }
-                ],
-                "example": [
-                  [
-                    0,
-                    1000000,
-                    [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    0,
-                    3747,
-                    3755
-                  ],
-                  [
-                    0,
-                    1000000,
-                    [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    1,
-                    3762,
-                    3755
-                  ],
-                  [
-                    0,
-                    1000000,
-                    [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    2,
-                    22,
-                    23
-                  ],
-                  [
-                    0,
-                    1000000,
-                    [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    3,
-                    23,
-                    24
-                  ],
-                  [
-                    0,
-                    1000000,
-                    [
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    6,
-                    0,
-                    0
-                  ],
-                  [
-                    0,
-                    1000000,
-                    [
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      4626,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0,
-                      0
-                    ],
-                    7,
-                    0,
-                    0
-                  ]
                 ]
               }
-            }
+            },
+            "example": [
+              [
+                0,
+                1000000,
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                0
+              ],
+              [
+                0,
+                1000000,
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                1
+              ],
+              [
+                0,
+                1000000,
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                2
+              ],
+              [
+                0,
+                1000000,
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                3
+              ],
+              [
+                0,
+                1000000,
+                [
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                6
+              ],
+              [
+                0,
+                1000000,
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  4626,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                7
+              ]
+            ]
           }
         }
       },
