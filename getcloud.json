@@ -5221,14 +5221,6 @@
             "type": "string",
             "description": "The cloud URL [cloudUrl]"
           },
-          "111": {
-            "type": "string",
-            "description": "The cloud name [cloudUserName]"
-          },
-          "112": {
-            "type": "string",
-            "description": "The cloud password [cloudPassword]"
-          },
           "113": {
             "type": "integer",
             "format": "int32",
@@ -5241,14 +5233,7 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The collect data minimum interval [collectDataMinInterval])"
-          },
-          "115": {
-            "type": "integer",
-            "format": "int32",
-            "minimum": 0,
-            "exclusiveMinimum": true,
-            "description": "The collect data maximum interval [collectDataMaxInterval])"
+            "description": "The collect data minimum interval [collectDataInterval])"
           },
           "116": {
             "type": "integer",
@@ -7853,14 +7838,6 @@
                 "type": "string",
                 "description": "The cloud URL [cloudUrl]"
               },
-              "111": {
-                "type": "string",
-                "description": "The cloud name [cloudUserName]"
-              },
-              "112": {
-                "type": "string",
-                "description": "The cloud password [cloudPassword]"
-              },
               "113": {
                 "type": "integer",
                 "format": "int32",
@@ -7873,14 +7850,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The collect data minimum interval [collectDataMinInterval] (in ms)"
-              },
-              "115": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The collect data maximum interval [collectDataMaxInterval] (in ms)"
+                "description": "The collect data minimum interval [collectDataInterval] (in ms)"
               },
               "116": {
                 "type": "integer",
