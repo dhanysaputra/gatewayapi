@@ -15,6 +15,9 @@
       "name": "bmu"
     },
     {
+      "name": "raw"
+    },
+    {
       "name": "bms"
     },
     {
@@ -36,6 +39,336 @@
     }
   ],
   "paths": {
+    "/raw/customer/{customer_id}": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "example": "2gn9PgjdRtyJgyFDL",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get customer raw data",
+        "responses": {
+          "200": {
+            "description": "Get customer raw data of a given customer id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawCustomer"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/raw/fleetgroup/{fleetgroup_id}": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "fleetgroup_id",
+            "in": "path",
+            "example": "2gn9PgjdRtyJgyFDL",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get fleetgroup raw data",
+        "responses": {
+          "200": {
+            "description": "Get fleetgroup raw data of a given fleetgroup id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawFleetgroup"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/raw/fleet/{fleet_id}": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "fleet_id",
+            "in": "path",
+            "example": "2ciCdYFTrwWGWiTG3",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get fleet raw data",
+        "responses": {
+          "200": {
+            "description": "Get fleet raw data of a given fleet id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawFleet"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/raw/device/{mui}": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "example": "10133108352000825",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get device raw data",
+        "responses": {
+          "200": {
+            "description": "Get device raw data of a given mui",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawDevice"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/raw/warningstatus/{mui}": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "example": "10133108352000825",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get warning and status",
+        "responses": {
+          "200": {
+            "description": "Get warning and status of a mui",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawWarningStatus"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/bmu/{mui}/overview/status": {
       "get": {
         "tags": [
@@ -5260,6 +5593,219 @@
       }
     },
     "schemas": {
+      "ResponseRawCustomer": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "customerId": {
+                "type": "string",
+                "example": "a4buegTj7pSjXzs2d"
+              },
+              "name": {
+                "type": "string",
+                "description": "customer's name",
+                "example": "STILL DK"
+              },
+              "description": {
+                "type": "string",
+                "description": "customer's description",
+                "example": ""
+              },
+              "email": {
+                "type": "string",
+                "description": "customer's email",
+                "example": ""
+              },
+              "parentCustomer": {
+                "type": "string",
+                "description": "parentID, a.k.a. the customer id of the customer's parent",
+                "example": "6J2uSnZJ8G7WYuRbc"
+              },
+              "hasFreeDevices": {
+                "type": "boolean",
+                "description": "Shouldn't be shown to customer",
+                "example": false
+              }
+            }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawFleetgroup": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "fleetgroupId": {
+                "type": "string",
+                "example": "23Zgd4KQkoZ6sp45e"
+              },
+              "name": {
+                "type": "string",
+                "description": "fleetgroup's name",
+                "example": "Gerresheimer Vaerløse A/S"
+              },
+              "isParentAFleetgroup": {
+                "type": "boolean",
+                "description": "True if it is a subfleetgroup. False if the fleetgroup is directly under a customer.",
+                "example": false
+              },
+              "parentId": {
+                "type": "string",
+                "description": "The fleetgroup ID (if isParentAFleetgroup=True), or the customer ID (if isParentAFleetgroup=False)",
+                "example": "a4buegTj7pSjXzs2d"
+              },
+              "description": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawFleet": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "fleetId": {
+                "type": "string",
+                "example": "2ciCdYFTrwWGWiTG3"
+              },
+              "name": {
+                "type": "string",
+                "description": "fleet's name",
+                "example": "Fresh Keeper-2"
+              },
+              "analysisEnabled": {
+                "type": "boolean",
+                "example": false
+              },
+              "description": {
+                "type": "string",
+                "example": ""
+              },
+              "isParentAFleetgroup": {
+                "type": "boolean",
+                "description": "True if this fleet is under a fleetgroup. False if this fleet is under a customer.",
+                "example": true
+              },
+              "parentId": {
+                "type": "string",
+                "description": "The fleetgroup ID (if isParentAFleetgroup=True), or the customer ID (if isParentAFleetgroup=False)",
+                "example": "QRY7KgPfiAiCib7bR"
+              }
+            }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawDevice": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "mui": {
+                "type": "string",
+                "example": "10133108352000825"
+              },
+              "type": {
+                "type": "string",
+                "example": "charger"
+              },
+              "customer_id": {
+                "type": "string",
+                "example": "MaQ67XipwKg5WA28C"
+              },
+              "description": {
+                "type": "string",
+                "example": ""
+              },
+              "deviceId": {
+                "type": "string",
+                "example": 90417209
+              },
+              "fleetId": {
+                "type": "string",
+                "example": ""
+              },
+              "productId": {
+                "type": "integer",
+                "example": 36
+              },
+              "serialNumber": {
+                "type": "integer",
+                "example": 9190417209
+              }
+            }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawWarningStatus": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "example": "DISCHARGING"
+              },
+              "warning": {
+                "type": "boolean",
+                "example": false
+              }
+            }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
       "ResponseBMUOverviewStatus": {
         "type": "object",
         "properties": {
