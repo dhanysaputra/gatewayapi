@@ -526,6 +526,74 @@
         }
       }
     },
+    "/raw/device/{fleetid}/children": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "fleetid",
+            "in": "path",
+            "example": "2K9nWM4evfXDdq9gj",
+            "required": true,
+            "description": "The fleet id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Get the list of devices under a fleet id",
+        "summary": "Get muis under a fleet",
+        "responses": {
+          "200": {
+            "description": "Get the children ids of a given customer id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawDeviceChildren"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/raw/warningstatus/{mui}": {
       "get": {
         "tags": [
@@ -5908,6 +5976,32 @@
             "example": [
               "23Zgd4KQkoZ6sp45e",
               "2qMJ7yzpnHcfworNo"
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawDeviceChildren": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "562959163630362",
+              "562959163630363",
+              "562959163630364",
+              "562959163630365"
             ]
           }
         },
