@@ -105,6 +105,73 @@
         }
       }
     },
+    "/raw/customer/{customer_id}/children": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "customer_id",
+            "in": "path",
+            "example": "oRiyTFqQdxjA9zWZB",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Get subcustomer ids",
+        "description": "Get the list of subcustomers",
+        "responses": {
+          "200": {
+            "description": "Get the children ids of a given customer id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawCustomerChildren"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/raw/fleetgroup/{fleetgroup_id}": {
       "get": {
         "tags": [
@@ -171,6 +238,84 @@
         }
       }
     },
+    "/raw/fleetgroup/{parenttype}/{parentid}/children": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "parenttype",
+            "in": "path",
+            "example": "customer",
+            "required": true,
+            "description": "the parent id is a 'customer' or' 'fleetgroup'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentid",
+            "in": "path",
+            "example": "a4buegTj7pSjXzs2d",
+            "required": true,
+            "description": "if parenttype 'customer', then customerid. If parenttype 'fleetgroup', then fleetgroup id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Get the list of fleetgroups under a customer, or Get the list of subfleetgroups under a fleetgroup",
+        "summary": "Get (sub)fleetgroup ids",
+        "responses": {
+          "200": {
+            "description": "Get the children ids of a given customer id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawFleetgroupChildren"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/raw/fleet/{fleet_id}": {
       "get": {
         "tags": [
@@ -200,6 +345,84 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResponseRawFleet"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/raw/fleet/{parenttype}/{parentid}/children": {
+      "get": {
+        "tags": [
+          "raw"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "parenttype",
+            "in": "path",
+            "example": "fleetgroup",
+            "required": true,
+            "description": "the parent id is a 'customer' or' 'fleetgroup'",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parentid",
+            "in": "path",
+            "example": "2K9nWM4evfXDdq9gj",
+            "required": true,
+            "description": "if parenttype 'customer', then customerid. If parenttype 'fleetgroup', then fleetgroup id",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "description": "Get the list of fleets under a customer or under a fleetgroup",
+        "summary": "Get fleet ids of a custumer/fleetgroup",
+        "responses": {
+          "200": {
+            "description": "Get the children ids of a given customer id",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseRawFleetChildren"
                 }
               }
             }
@@ -5634,6 +5857,82 @@
                 "example": false
               }
             }
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawCustomerChildren": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "JiigBCbakus3XEgkA",
+              "MaQ67XipwKg5WA28C",
+              "RJztkDmRgSQQuxkQu",
+              "SgNoguA3ELip2e4gP",
+              "anJ4q7GQ5NfDPteLR",
+              "cFmXyBAeqFWb6JnFj"
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawFleetgroupChildren": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "23Zgd4KQkoZ6sp45e",
+              "2qMJ7yzpnHcfworNo"
+            ]
+          }
+        },
+        "required": [
+          "status",
+          "data"
+        ]
+      },
+      "ResponseRawFleetChildren": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "description": "success or fail",
+            "example": "success"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": [
+              "Knh9Fh9es4f7T7Wyy",
+              "LXP9Qq3ndvi66ZopC"
+            ]
           }
         },
         "required": [
