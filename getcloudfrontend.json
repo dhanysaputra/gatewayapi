@@ -274,7 +274,7 @@
         "summary": "Get (sub)fleetgroup ids",
         "responses": {
           "200": {
-            "description": "Get the children ids of a given customer id",
+            "description": "Get the fleetgroup ids of a given customer id, or get the subfleetgoup ids of a given fleetgroup id",
             "content": {
               "application/json": {
                 "schema": {
@@ -415,10 +415,10 @@
           }
         ],
         "description": "Get the list of fleets under a customer or under a fleetgroup",
-        "summary": "Get fleet ids of a custumer/fleetgroup",
+        "summary": "Get fleet ids of a customer/fleetgroup",
         "responses": {
           "200": {
-            "description": "Get the children ids of a given customer id",
+            "description": "Get the fleet ids of a given customer id or fleetgroup id",
             "content": {
               "application/json": {
                 "schema": {
@@ -549,10 +549,10 @@
           }
         ],
         "description": "Get the list of devices under a fleet id",
-        "summary": "Get muis under a fleet",
+        "summary": "Get muis of the devices under a fleet",
         "responses": {
           "200": {
-            "description": "Get the children ids of a given customer id",
+            "description": "Get the list of devices under a fleet id",
             "content": {
               "application/json": {
                 "schema": {
