@@ -613,13 +613,13 @@
                 },
                 "examples": {
                   "BMU": {
-                    "$ref": "#/components/examples/ResponsePostStatusBMUExample"
+                    "$ref": "#/components/examples/ResponseStatusChargerExample"
                   },
                   "Charger": {
-                    "$ref": "#/components/examples/ResponsePostStatusChargerExample"
+                    "$ref": "#/components/examples/ResponseStatusChargerExample"
                   },
                   "Gateway": {
-                    "$ref": "#/components/examples/ResponsePostStatusGatewayExample"
+                    "$ref": "#/components/examples/ResponseStatusGatewayExample"
                   }
                 }
               }
@@ -709,13 +709,13 @@
                 },
                 "examples": {
                   "BMU": {
-                    "$ref": "#/components/examples/ResponseGetStatusBMUExample"
+                    "$ref": "#/components/examples/ResponseStatusBMUExample"
                   },
                   "Charger": {
-                    "$ref": "#/components/examples/ResponseGetStatusChargerExample"
+                    "$ref": "#/components/examples/ResponseStatusChargerExample"
                   },
                   "Gateway": {
-                    "$ref": "#/components/examples/ResponseGetStatusGatewayExample"
+                    "$ref": "#/components/examples/ResponseStatusGatewayExample"
                   }
                 }
               }
@@ -823,7 +823,7 @@
                       "$ref": "#/components/schemas/ResponseConfigChargerSchema"
                     },
                     {
-                      "$ref": "#/components/schemas/ResponsePostConfigGatewaySchema"
+                      "$ref": "#/components/schemas/ResponseConfigGatewaySchema"
                     }
                   ]
                 },
@@ -835,7 +835,7 @@
                     "$ref": "#/components/examples/ResponseConfigChargerExample"
                   },
                   "Gateway": {
-                    "$ref": "#/components/examples/ResponsePostConfigGatewayExample"
+                    "$ref": "#/components/examples/ResponseConfigGatewayExample"
                   }
                 }
               }
@@ -920,7 +920,7 @@
                       "$ref": "#/components/schemas/ResponseConfigChargerSchema"
                     },
                     {
-                      "$ref": "#/components/schemas/ResponseGetConfigGatewaySchema"
+                      "$ref": "#/components/schemas/ResponseConfigGatewaySchema"
                     }
                   ]
                 },
@@ -932,7 +932,7 @@
                     "$ref": "#/components/examples/ResponseConfigChargerExample"
                   },
                   "Gateway": {
-                    "$ref": "#/components/examples/ResponseGetConfigGatewayExample"
+                    "$ref": "#/components/examples/ResponseConfigGatewayExample"
                   }
                 }
               }
@@ -2024,7 +2024,7 @@
           "38": 11618022,
           "39": 502,
           "44": 100,
-          "45": 1643703827,
+          "45": "2022-04-28T11:36:25.376+0100",
           "46": -0.128,
           "47": 39.085,
           "48": 30.7,
@@ -2049,7 +2049,7 @@
           "67": 30,
           "68": 28,
           "69": 1,
-          "70": 1643703827,
+          "70": "2022-04-28T11:36:25.376+0100",
           "71": 128,
           "72": 21,
           "73": 20568,
@@ -2060,8 +2060,8 @@
             101,
             102
           ],
-          "128": 1643703827,
-          "219": 1643703827,
+          "128": "2022-04-28T11:36:25.376+0100",
+          "219": "2022-04-28T11:36:25.376+0100",
           "220": [
             7,
             2,
@@ -2081,7 +2081,7 @@
           "26": 1,
           "38": 11618022,
           "39": 502,
-          "45": 1643703827,
+          "45": "2022-04-28T11:36:25.376+0100",
           "53": 38,
           "54": 7,
           "55": 95,
@@ -2091,7 +2091,7 @@
           "64": 99230,
           "68": 228,
           "69": 228,
-          "70": 1643703827,
+          "70": "2022-04-28T11:36:25.376+0100",
           "71": 41,
           "72": 56,
           "73": 0,
@@ -2105,11 +2105,11 @@
             101,
             102
           ],
-          "128": 1643703827,
+          "128": "2022-04-28T11:36:25.376+0100",
           "129": "1.10-06",
           "130": 4,
           "218": 4,
-          "219": 1643703827,
+          "219": "2022-04-28T11:36:25.376+0100",
           "220": [
             16,
             17,
@@ -2117,6 +2117,7 @@
             20,
             14
           ],
+          "382": 15,
           "389": 70305543
         }
       },
@@ -2124,7 +2125,6 @@
         "value": {
           "38": 11618004,
           "39": 3,
-          "45": 1643703827,
           "93": 11618015,
           "94": 2,
           "96": 16321,
@@ -2137,7 +2137,7 @@
           "107": 0,
           "108": true,
           "127": [],
-          "219": 1643703827,
+          "219": "2022-04-28T11:36:25.376+0100",
           "220": [],
           "248": 16325,
           "389": 9180421615
@@ -2178,7 +2178,7 @@
           "35": 19047,
           "36": 15,
           "37": 52560,
-          "219": 1643703827,
+          "219": "2022-04-28T11:36:25.376+0100",
           "324": 0
         }
       },
@@ -2212,7 +2212,7 @@
           "97": 128,
           "98": 300,
           "123": 0,
-          "219": 1643703827,
+          "219": "2022-04-28T11:36:25.376+0100",
           "222": 0,
           "223": 55,
           "224": 20000,
@@ -2271,7 +2271,8 @@
           "270": false,
           "271": false,
           "272": 30.2,
-          "275": true
+          "275": true,
+          "406": 0
         }
       },
       "configGatewayExample": {
@@ -2292,10 +2293,9 @@
           "212": null,
           "213": null,
           "214": "Iphone von ion",
-          "215": "",
           "216": 1440,
           "217": null,
-          "219": 1643703827,
+          "219": "2022-04-28T11:36:25.376+0100",
           "225": null,
           "247": 125000
         }
@@ -2308,7 +2308,6 @@
             129,
             130,
             133,
-            134,
             138,
             139,
             140,
@@ -2370,8 +2369,7 @@
               ],
               "LK10-04",
               1,
-              1643527427,
-              1643545427,
+              "2022-04-28T11:36:25.376+0100",
               2.03,
               2.2,
               1.9,
@@ -2393,8 +2391,8 @@
               1,
               18,
               85.6,
-              1643545427,
-              1643559827,
+              "2022-04-28T12:36:25.376+0100",
+              "2022-04-28T13:36:25.376+0100",
               2.2,
               2.1,
               2.21,
@@ -2443,8 +2441,7 @@
               ],
               "LK10-04",
               1,
-              1643703827,
-              1643732627,
+              "2022-04-29T11:36:25.376+0100",
               2.03,
               2.2,
               1.9,
@@ -2466,8 +2463,8 @@
               1,
               18,
               85.6,
-              1643732627,
-              1643750627,
+              "2022-04-29T13:36:25.376+0100",
+              "2022-04-28T14:36:25.376+0100",
               2.2,
               2.1,
               2.21,
@@ -2522,7 +2519,6 @@
             123,
             127,
             129,
-            130,
             160,
             161,
             165,
@@ -2545,7 +2541,9 @@
             25,
             26,
             5,
-            50
+            50,
+            416,
+            417
           ],
           "rows": [
             [
@@ -2558,9 +2556,8 @@
               1,
               [],
               "12.FCIU",
-              0,
-              1643545427,
-              1643559827,
+              "2022-04-28T12:36:25.376+0100",
+              "2022-04-28T14:36:25.376+0100",
               2.124,
               2.4,
               54,
@@ -2588,7 +2585,9 @@
               2,
               12,
               12,
-              400
+              400,
+              300,
+              300
             ],
             [
               1,
@@ -2600,9 +2599,8 @@
               1,
               [],
               "12.FCIU",
-              0,
-              1643732627,
-              1643750627,
+              "2022-04-29T12:36:25.376+0100",
+              "2022-04-29T13:36:25.376+0100",
               2.124,
               2.4,
               54,
@@ -2630,12 +2628,14 @@
               2,
               12,
               12,
-              400
+              400,
+              300,
+              300
             ]
           ]
         }
       },
-      "ResponsePostStatusBMUExample": {
+      "ResponseStatusBMUExample": {
         "value": {
           "status": "success",
           "data": {
@@ -2645,7 +2645,7 @@
             "38": 11618022,
             "39": 502,
             "44": 100,
-            "45": 1643703827,
+            "45": "2022-04-28T11:36:25.376+0100",
             "46": -0.128,
             "47": 39.085,
             "48": 30.7,
@@ -2670,7 +2670,7 @@
             "67": 30,
             "68": 28,
             "69": 1,
-            "70": 1643703827,
+            "70": "2022-04-28T11:36:25.376+0100",
             "71": 128,
             "72": 21,
             "73": 20568,
@@ -2681,8 +2681,8 @@
               101,
               102
             ],
-            "128": 1643703827,
-            "219": 1643703827,
+            "128": "2022-04-28T11:36:25.376+0100",
+            "219": "2022-04-28T11:36:25.376+0100",
             "220": [
               7,
               2,
@@ -2693,65 +2693,7 @@
           }
         }
       },
-      "ResponseGetStatusBMUExample": {
-        "value": {
-          "status": "success",
-          "data": {
-            "6": 875,
-            "35": 19047,
-            "36": 15,
-            "38": 11618022,
-            "39": 502,
-            "44": 100,
-            "45": 1643703827,
-            "46": -0.128,
-            "47": 39.085,
-            "48": 30.7,
-            "49": 28.241669,
-            "50": 680,
-            "51": 1012787,
-            "52": 7250,
-            "53": 8,
-            "54": 10,
-            "55": 10,
-            "56": 0,
-            "57": 0,
-            "58": 10,
-            "59": 1861,
-            "60": 7964303,
-            "61": 7213,
-            "62": 261986,
-            "63": 2191134,
-            "64": 9629,
-            "65": 411841,
-            "66": 433516,
-            "67": 30,
-            "68": 28,
-            "69": 1,
-            "70": 1643703827,
-            "71": 128,
-            "72": 21,
-            "73": 20568,
-            "74": 35811,
-            "80": 13.024,
-            "81": 6.437,
-            "127": [
-              101,
-              102
-            ],
-            "128": 1643703827,
-            "219": 1643703827,
-            "220": [
-              7,
-              2,
-              4,
-              29
-            ],
-            "389": 9180421615
-          }
-        }
-      },
-      "ResponsePostStatusChargerExample": {
+      "ResponseStatusChargerExample": {
         "value": {
           "status": "success",
           "data": {
@@ -2763,7 +2705,7 @@
             "26": 1,
             "38": 11618022,
             "39": 502,
-            "45": 1643703827,
+            "45": "2022-04-28T11:36:25.376+0100",
             "53": 38,
             "54": 7,
             "55": 95,
@@ -2773,7 +2715,7 @@
             "64": 99230,
             "68": 228,
             "69": 228,
-            "70": 1643703827,
+            "70": "2022-04-28T11:36:25.376+0100",
             "71": 41,
             "72": 56,
             "73": 0,
@@ -2787,11 +2729,11 @@
               101,
               102
             ],
-            "128": 1643703827,
+            "128": "2022-04-28T11:36:25.376+0100",
             "129": "1.10-06",
             "130": 4,
             "218": 4,
-            "219": 1643703827,
+            "219": "2022-04-28T11:36:25.376+0100",
             "220": [
               16,
               17,
@@ -2799,69 +2741,17 @@
               20,
               14
             ],
+            "382": 15,
             "389": 70305543
           }
         }
       },
-      "ResponseGetStatusChargerExample": {
-        "value": {
-          "status": "success",
-          "data": {
-            "1": 223,
-            "5": 24,
-            "6": 575,
-            "24": 0,
-            "25": 0.006,
-            "26": 1,
-            "38": 11618022,
-            "39": 502,
-            "45": 1643703827,
-            "53": 38,
-            "54": 7,
-            "55": 95,
-            "56": 81,
-            "57": 7,
-            "63": 1565,
-            "64": 99230,
-            "68": 228,
-            "69": 228,
-            "70": 1643703827,
-            "71": 41,
-            "72": 56,
-            "73": 0,
-            "74": 0,
-            "75": 5908850,
-            "76": 0,
-            "88": 15.4,
-            "90": 0,
-            "91": 52.723,
-            "127": [
-              101,
-              102
-            ],
-            "128": 1643703827,
-            "129": "1.10-06",
-            "130": 4,
-            "218": 4,
-            "219": 1643703827,
-            "220": [
-              16,
-              17,
-              13,
-              20,
-              14
-            ],
-            "389": 70305543
-          }
-        }
-      },
-      "ResponsePostStatusGatewayExample": {
+      "ResponseStatusGatewayExample": {
         "value": {
           "status": "success",
           "data": {
             "38": 11618004,
             "39": 3,
-            "45": 1643703827,
             "93": 11618015,
             "94": 2,
             "96": 16321,
@@ -2874,33 +2764,7 @@
             "107": 0,
             "108": true,
             "127": [],
-            "219": 1643703827,
-            "220": [],
-            "248": 16325,
-            "389": 9180421615
-          }
-        }
-      },
-      "ResponseGetStatusGatewayExample": {
-        "value": {
-          "status": "success",
-          "data": {
-            "38": 11618004,
-            "39": 3,
-            "45": 1643703827,
-            "93": 11618015,
-            "94": 2,
-            "96": 16321,
-            "101": "Qt 5.9.2 (32 bit)",
-            "102": "C4:F3:12:62:E8:A2",
-            "103": "98:5D:AD:CD:FA:51",
-            "104": 3380,
-            "105": 18,
-            "106": -100,
-            "107": 0,
-            "108": true,
-            "127": [],
-            "219": 1643703827,
+            "219": "2022-04-28T11:36:25.376+0100",
             "220": [],
             "248": 16325,
             "389": 9180421615
@@ -2944,7 +2808,7 @@
             "35": 19047,
             "36": 15,
             "37": 52560,
-            "219": 1643703827,
+            "219": "2022-04-28T11:36:25.376+0100",
             "324": 0
           }
         }
@@ -2981,7 +2845,7 @@
             "97": 128,
             "98": 300,
             "123": 0,
-            "219": 1643703827,
+            "219": "2022-04-28T11:36:25.376+0100",
             "222": 0,
             "223": 55,
             "224": 20000,
@@ -3040,11 +2904,12 @@
             "270": false,
             "271": false,
             "272": 30.2,
-            "275": true
+            "275": true,
+            "406": 0
           }
         }
       },
-      "ResponsePostConfigGatewayExample": {
+      "ResponseConfigGatewayExample": {
         "value": {
           "status": "success",
           "data": {
@@ -3064,39 +2929,9 @@
             "212": null,
             "213": null,
             "214": "Iphone von ion",
-            "215": "",
             "216": 1440,
             "217": null,
-            "219": 1643703827,
-            "225": null,
-            "247": 125000
-          }
-        }
-      },
-      "ResponseGetConfigGatewayExample": {
-        "value": {
-          "status": "success",
-          "data": {
-            "1": 190407786,
-            "19": 3562,
-            "109": "Get Connected",
-            "110": "https://www.get-cloud.com",
-            "113": 30,
-            "114": 3,
-            "116": 10000,
-            "124": false,
-            "125": false,
-            "131": "192.168.2.21",
-            "132": false,
-            "189": "255.255.255.0",
-            "206": "192.168.2.0",
-            "212": null,
-            "213": null,
-            "214": "Iphone von ion",
-            "215": "",
-            "216": 1440,
-            "217": null,
-            "219": 1643703827,
+            "219": "2022-04-28T11:36:25.376+0100",
             "225": null,
             "247": 125000
           }
@@ -3111,7 +2946,6 @@
             129,
             130,
             133,
-            134,
             138,
             139,
             140,
@@ -3173,8 +3007,7 @@
               ],
               "LK10-04",
               1,
-              1643527427,
-              1643545427,
+              "2022-04-28T11:36:25.376+0100",
               2.03,
               2.2,
               1.9,
@@ -3196,8 +3029,8 @@
               1,
               18,
               85.6,
-              1643545427,
-              1643559827,
+              "2022-04-28T12:36:25.376+0100",
+              "2022-04-28T13:36:25.376+0100",
               2.2,
               2.1,
               2.21,
@@ -3246,8 +3079,7 @@
               ],
               "LK10-04",
               1,
-              1643703827,
-              1643732627,
+              "2022-04-29T11:36:25.376+0100",
               2.03,
               2.2,
               1.9,
@@ -3269,8 +3101,8 @@
               1,
               18,
               85.6,
-              1643732627,
-              1643750627,
+              "2022-04-29T13:36:25.376+0100",
+              "2022-04-28T14:36:25.376+0100",
               2.2,
               2.1,
               2.21,
@@ -3326,7 +3158,6 @@
             123,
             127,
             129,
-            130,
             160,
             161,
             165,
@@ -3349,7 +3180,9 @@
             25,
             26,
             5,
-            50
+            50,
+            416,
+            417
           ],
           "rows": [
             [
@@ -3362,9 +3195,8 @@
               1,
               [],
               "12.FCIU",
-              0,
-              1643545427,
-              1643559827,
+              "2022-04-28T12:36:25.376+0100",
+              "2022-04-28T14:36:25.376+0100",
               2.124,
               2.4,
               54,
@@ -3392,7 +3224,9 @@
               2,
               12,
               12,
-              400
+              400,
+              300,
+              300
             ],
             [
               1,
@@ -3404,9 +3238,8 @@
               1,
               [],
               "12.FCIU",
-              0,
-              1643732627,
-              1643750627,
+              "2022-04-29T12:36:25.376+0100",
+              "2022-04-29T13:36:25.376+0100",
               2.124,
               2.4,
               54,
@@ -3434,7 +3267,9 @@
               2,
               12,
               12,
-              400
+              400,
+              300,
+              300
             ]
           ]
         }
@@ -3443,25 +3278,17 @@
         "value": [
           {
             "187": 1,
-            "188": 0,
-            "191": 1643527427,
-            "535": [
-              105
-            ],
-            "536": [
-              true
-            ]
+            "188": 101,
+            "191": "2022-04-28T12:36:25.376+0100",
+            "535": 105,
+            "536": true
           },
           {
             "187": 2,
-            "188": 0,
-            "191": 1643527429,
-            "535": [
-              105
-            ],
-            "536": [
-              false
-            ]
+            "188": 101,
+            "191": "2022-04-28T17:36:25.376+0100",
+            "535": 105,
+            "536": false
           }
         ]
       },
@@ -3471,25 +3298,17 @@
           "data": [
             {
               "187": 1,
-              "188": 0,
-              "191": 1643527427,
-              "535": [
-                105
-              ],
-              "536": [
-                true
-              ]
+              "188": 101,
+              "191": "2022-04-28T12:36:25.376+0100",
+              "535": 105,
+              "536": true
             },
             {
               "187": 2,
-              "188": 0,
-              "191": 1643527429,
-              "535": [
-                105
-              ],
-              "536": [
-                false
-              ]
+              "188": 101,
+              "191": "2022-04-28T17:36:25.376+0100",
+              "535": 105,
+              "536": false
             }
           ]
         }
@@ -3498,17 +3317,11 @@
         "value": [
           {
             "187": 3,
-            "188": 2,
+            "188": 6,
             "191": 1643527429,
-            "538": [
-              5
-            ],
-            "541": [
-              12
-            ],
-            "542": [
-              13
-            ]
+            "538": 5,
+            "541": 12,
+            "542": 13
           }
         ]
       },
@@ -3518,17 +3331,11 @@
           "data": [
             {
               "187": 3,
-              "188": 2,
+              "188": 6,
               "191": 1643527429,
-              "538": [
-                5
-              ],
-              "541": [
-                12
-              ],
-              "542": [
-                13
-              ]
+              "538": 5,
+              "541": 12,
+              "542": 13
             }
           ]
         }
@@ -3537,11 +3344,9 @@
         "value": [
           {
             "187": 4,
-            "188": 4,
+            "188": 103,
             "191": 1643527429,
-            "546": [
-              "electrolyte"
-            ]
+            "546": 3
           },
           {
             "38": 1337,
@@ -3549,7 +3354,7 @@
             "93": 1337,
             "94": 42,
             "187": 5,
-            "188": 1,
+            "188": 102,
             "191": 1643529429
           }
         ]
@@ -3560,11 +3365,9 @@
           "data": [
             {
               "187": 4,
-              "188": 4,
+              "188": 103,
               "191": 1643527429,
-              "546": [
-                "electrolyte"
-              ]
+              "546": 3
             },
             {
               "38": 1337,
@@ -3572,7 +3375,7 @@
               "93": 1337,
               "94": 42,
               "187": 5,
-              "188": 1,
+              "188": 102,
               "191": 1643529429
             }
           ]
@@ -3807,9 +3610,8 @@
             "description": "Amount of capacity left in the battery. [stateOfCharge])"
           },
           "45": {
-            "type": "integer",
-            "format": "int64",
-            "description": "Decive time. [deviceTime]"
+            "type": "string",
+            "description": "Device time in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [deviceTime]"
           },
           "46": {
             "type": "number",
@@ -3971,7 +3773,8 @@
             "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
           },
           "70": {
-            "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
+            "type": "string",
+            "description": "The timestamp of the last history log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [historyLogDate]"
           },
           "71": {
             "type": "integer",
@@ -4026,11 +3829,12 @@
             "description": "Array of active alarm codes [activeAlarms]"
           },
           "128": {
-            "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
+            "type": "string",
+            "description": "The Timestamp of the last event log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [eventLogDate]"
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "220": {
             "type": "array",
@@ -4157,9 +3961,8 @@
             "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
           },
           "45": {
-            "type": "integer",
-            "format": "int64",
-            "description": "Decive time. [deviceTime]"
+            "type": "string",
+            "description": "Device time in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [deviceTime]"
           },
           "53": {
             "type": "integer",
@@ -4225,7 +4028,8 @@
             "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
           },
           "70": {
-            "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
+            "type": "string",
+            "description": "The timestamp of the last history log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [historyLogDate]"
           },
           "71": {
             "type": "integer",
@@ -4298,7 +4102,8 @@
             "description": "Array of active alarm codes [activeAlarms]"
           },
           "128": {
-            "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
+            "type": "string",
+            "description": "The Timestamp of the last event log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [eventLogDate]"
           },
           "129": {
             "type": "string",
@@ -4320,7 +4125,7 @@
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "220": {
             "type": "array",
@@ -4362,6 +4167,7 @@
           "25",
           "26",
           "38",
+          "382",
           "389",
           "39",
           "45",
@@ -4404,11 +4210,6 @@
             "minimum": 0,
             "exclusiveMinimum": true,
             "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
-          },
-          "45": {
-            "type": "integer",
-            "format": "int64",
-            "description": "Decive time. [deviceTime]"
           },
           "93": {
             "type": "integer",
@@ -4455,6 +4256,8 @@
             "description": "The amount of found nodes [foundNodes]"
           },
           "106": {
+            "type": "integer",
+            "format": "int32",
             "description": "The strength of the wireless interface [wirelessSignalStrength]"
           },
           "107": {
@@ -4484,7 +4287,7 @@
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "220": {
             "type": "array",
@@ -4529,7 +4332,6 @@
           "38",
           "389",
           "39",
-          "45",
           "93",
           "94",
           "96"
@@ -4772,7 +4574,7 @@
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "324": {
             "type": "integer",
@@ -5037,7 +4839,7 @@
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "222": {
             "type": "integer",
@@ -5047,9 +4849,15 @@
             "description": "Power group [powerGroup]"
           },
           "223": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 0,
             "description": "Mains current limit [mainsCurrentLimit])"
           },
           "224": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 0,
             "description": "Mains power limit [mainsPowerLimit])"
           },
           "226": {
@@ -5380,14 +5188,75 @@
         },
         "required": [
           "1",
+          "123",
+          "18",
           "19",
+          "2",
           "219",
+          "222",
+          "223",
+          "224",
+          "226",
+          "227",
+          "228",
+          "229",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234",
+          "235",
+          "236",
+          "237",
+          "238",
+          "239",
           "24",
+          "240",
+          "241",
+          "242",
+          "243",
+          "244",
+          "245",
+          "246",
           "25",
+          "254",
+          "255",
+          "256",
+          "257",
+          "258",
+          "259",
           "26",
+          "260",
+          "261",
+          "262",
+          "263",
+          "264",
+          "265",
+          "267",
+          "268",
+          "269",
+          "270",
+          "271",
+          "272",
+          "275",
+          "30",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "36",
+          "37",
+          "406",
+          "42",
+          "43",
           "5",
           "6",
           "77",
+          "78",
+          "79",
+          "84",
+          "85",
           "9",
           "97",
           "98"
@@ -5475,10 +5344,6 @@
             "type": "string",
             "description": "The wireless SSID [wirelessSsid]"
           },
-          "215": {
-            "type": "string",
-            "description": "The wireless password [wirelessPassword]"
-          },
           "216": {
             "type": "integer",
             "format": "int32",
@@ -5490,7 +5355,7 @@
           },
           "219": {
             "type": "string",
-            "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+            "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
           },
           "225": {
             "type": "string",
@@ -5521,7 +5386,6 @@
           "212",
           "213",
           "214",
-          "215",
           "216",
           "217",
           "219",
@@ -5537,14 +5401,13 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm, can be NULL [algorithmVersion]\n  * `133` - The start time of discharge in POSIX format, seconds since 1 Januari 1970 with local time offset [dischargeTimeStart]\n  * `134` - The end time of discharge in POSIX format, seconds since 1 Januari 1970 with local time offset [dischargeTimeEnd]\n  * `138` - Battery cell voltage, 60-90s before entering the discharge state. [dischargeVpcStart]\n  * `139` - Battery cell voltage, 60-90s before entering charge state. [dischargeVpcEnd]\n  * `140` - Minimum battery voltage per cell during discharge. [dischargeVpcMin]\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `142` - State of charge at end of discharge. [dischargeStateOfChargeEnd]\n  * `143` - Battery temperature at discharge start time. [dischargeBatteryTemperatureStart]\n  * `144` - Battery temperature at charge start time. [dischargeBatteryTemperatureEnd]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `149` - Ah discharged when current > 25 % of Battery capacity. [dischargeAhI25]\n  * `150` - Discharge time when current > 25 % of Battery capacity. [dischargeTimeI25]\n  * `151` - Ah discharged when 25% ≥ I > 15% of Battery capacity. [dischargeAhI15]\n  * `152` - Discharge time when 25% ≥ I > 15 % of Battery capacity. [dischargeTimeI15]\n  * `153` - Ah discharged when 15% ≥ I > 0% of Battery capacity [dischargeAhI0]\n  * `154` - Discharge time when 15% ≥ I > 0 % of Battery capacity. [dischargeTimeI0]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `159` - The maximum current during discharge. [dischargeCurrentMax]\n  * `160` - Start datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `167` - Maximum voltage per cell during charge. [chargeVpcMax]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `170` - Battery temperature at Charge start time. [chargeBatteryTemperatureStart]\n  * `171` - Battery temperature at Charge end time. [chargeBatteryTemperatureEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `176` - Ah charged when current > 25 % of capacity. [chargeAhI25]\n  * `177` - Charge time when current > 25 % of capacity. [chargeTimeI25]\n  * `178` - Ah charged when 25% ≥ I > 15% of capacity. [chargeAhI15]\n  * `179` - Charge time when 25% ≥ I > 15 % of capacity. [chargeTimeI15]\n  * `180` - Ah charged when 15% ≥ I > 0% of capacity. [chargeAhI0]\n  * `181` - Charge time when 15% ≥ I > 0 % of capacity. [chargeTimeI0]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `186` - Maximum current measured during charge. [chargeCurrentMax]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `5` - Number of cells of the battery [cells]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm, can be NULL [algorithmVersion]\n  * `133` - The start time of discharge in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [dischargeTimeStart]\n  * `138` - Battery cell voltage, 60-90s before entering the discharge state. [dischargeVpcStart]\n  * `139` - Battery cell voltage, 60-90s before entering charge state. [dischargeVpcEnd]\n  * `140` - Minimum battery voltage per cell during discharge. [dischargeVpcMin]\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `142` - State of charge at end of discharge. [dischargeStateOfChargeEnd]\n  * `143` - Battery temperature at discharge start time. [dischargeBatteryTemperatureStart]\n  * `144` - Battery temperature at charge start time. [dischargeBatteryTemperatureEnd]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `149` - Ah discharged when current > 25 % of Battery capacity. [dischargeAhI25]\n  * `150` - Discharge time when current > 25 % of Battery capacity. [dischargeTimeI25]\n  * `151` - Ah discharged when 25% ≥ I > 15% of Battery capacity. [dischargeAhI15]\n  * `152` - Discharge time when 25% ≥ I > 15 % of Battery capacity. [dischargeTimeI15]\n  * `153` - Ah discharged when 15% ≥ I > 0% of Battery capacity [dischargeAhI0]\n  * `154` - Discharge time when 15% ≥ I > 0 % of Battery capacity. [dischargeTimeI0]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `159` - The maximum current during discharge. [dischargeCurrentMax]\n  * `160` - Start datetime of charging in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `167` - Maximum voltage per cell during charge. [chargeVpcMax]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `170` - Battery temperature at Charge start time. [chargeBatteryTemperatureStart]\n  * `171` - Battery temperature at Charge end time. [chargeBatteryTemperatureEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `176` - Ah charged when current > 25 % of capacity. [chargeAhI25]\n  * `177` - Charge time when current > 25 % of capacity. [chargeTimeI25]\n  * `178` - Ah charged when 25% ≥ I > 15% of capacity. [chargeAhI15]\n  * `179` - Charge time when 25% ≥ I > 15 % of capacity. [chargeTimeI15]\n  * `180` - Ah charged when 15% ≥ I > 0% of capacity. [chargeAhI0]\n  * `181` - Charge time when 15% ≥ I > 0 % of capacity. [chargeTimeI0]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `186` - Maximum current measured during charge. [chargeCurrentMax]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `5` - Number of cells of the battery [cells]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
             },
             "example": [
               127,
               129,
               130,
               133,
-              134,
               138,
               139,
               140,
@@ -5603,7 +5466,7 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `133` [dischargeTimeStart] - DATETIME [0 - ∞])\n  * `134` [dischargeTimeEnd] - DATETIME [0 - ∞])\n  * `138` [dischargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `139` [dischargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `140` [dischargeVpcMin] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `142` [dischargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `143` [dischargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `144` [dischargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `149` [dischargeAhI25] - INT32 [0 - ∞])\n  * `150` [dischargeTimeI25] - INT32 [0 - ∞])\n  * `151` [dischargeAhI15] - INT32 [0 - ∞])\n  * `152` [dischargeTimeI15] - INT32 [0 - ∞])\n  * `153` [dischargeAhI0] - INT32 [0 - ∞])\n  * `154` [dischargeTimeI0] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `159` [dischargeCurrentMax] - DOUBLE [0 - ∞])\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `167` [chargeVpcMax] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `170` [chargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `171` [chargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `176` [chargeAhI25] - INT32 [0 - ∞])\n  * `177` [chargeTimeI25] - INT32 [0 - ∞])\n  * `178` [chargeAhI15] - INT32 [0 - ∞])\n  * `179` [chargeTimeI15] - INT32 [0 - ∞])\n  * `180` [chargeAhI0] - INT32 [0 - ∞])\n  * `181` [chargeTimeI0] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `186` [chargeCurrentMax] - DOUBLE [0 - ∞] (divided by 0.1)\n  * `187` [index] - INT32 [0 - ∞]\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `5` [cells] - INT32 [0 - ∞]\n  * `6` [capacity] - DOUBLE [0 - ∞])\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `133` [dischargeTimeStart] - DATETIME [0 - ∞])\n  * `138` [dischargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `139` [dischargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `140` [dischargeVpcMin] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `142` [dischargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `143` [dischargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `144` [dischargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `149` [dischargeAhI25] - INT32 [0 - ∞])\n  * `150` [dischargeTimeI25] - INT32 [0 - ∞])\n  * `151` [dischargeAhI15] - INT32 [0 - ∞])\n  * `152` [dischargeTimeI15] - INT32 [0 - ∞])\n  * `153` [dischargeAhI0] - INT32 [0 - ∞])\n  * `154` [dischargeTimeI0] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `159` [dischargeCurrentMax] - DOUBLE [0 - ∞])\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `167` [chargeVpcMax] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `170` [chargeBatteryTemperatureStart] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `171` [chargeBatteryTemperatureEnd] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `176` [chargeAhI25] - INT32 [0 - ∞])\n  * `177` [chargeTimeI25] - INT32 [0 - ∞])\n  * `178` [chargeAhI15] - INT32 [0 - ∞])\n  * `179` [chargeTimeI15] - INT32 [0 - ∞])\n  * `180` [chargeAhI0] - INT32 [0 - ∞])\n  * `181` [chargeTimeI0] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `186` [chargeCurrentMax] - DOUBLE [0 - ∞] (divided by 0.1)\n  * `187` [index] - INT32 [0 - ∞]\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `5` [cells] - INT32 [0 - ∞]\n  * `6` [capacity] - DOUBLE [0 - ∞])\n",
                 "oneOf": [
                   {
                     "type": "string"
@@ -5641,7 +5504,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `1` - Device numerical identification, configurable. [deviceID]\n  * `118` - Charged Ah in % of total capacity in main stage [chargeAhP]\n  * `119` - Forklift ID [forkLiftId]\n  * `120` - Battery serial number [batterySerialNumber]\n  * `121` -  [reserved]\n  * `123` - The mode that charger will use to charge the battery [chargingMode]\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `130` - The version of the charging algorithm, can be NULL [algorithmVersion]\n  * `160` - Start datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `2` - Type of battery [batteryType]\n  * `203` - Charger temperature when battery connected before start of charging. [chargerTemperatureStart]\n  * `204` - Charger temperature when battery disconnected. [chargerTemperatureEnd]\n  * `205` - Maximum charger temperature between charge start time and charge end time. [chargerTemperatureMax]\n  * `207` - Event log index at start of charge [eventIndexStart]\n  * `208` - Event log index at end of charge [eventIndexEnd]\n  * `210` - Time when charger ouput power is turned on. [chargeTime]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `389` - Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]\n  * `416` - Max power during charge. [LogPeakPower]\n  * `417` - Consumed mains power. [LogConsumedKWh]\n  * `5` - Number of cells of the battery [cells]\n  * `50` - Calculated actual battery capacity. [actualCapacity]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `1` - Device numerical identification, configurable. [deviceID]\n  * `118` - Charged Ah in % of total capacity in main stage [chargeAhP]\n  * `119` - Forklift ID [forkLiftId]\n  * `120` - Battery serial number [batterySerialNumber]\n  * `121` -  [reserved]\n  * `123` - The mode that charger will use to charge the battery [chargingMode]\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `129` - The name of the charging algorithm [algorithmName]\n  * `160` - Start datetime of charging in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeStart]\n  * `161` - End datetime of charging in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [chargeTimeEnd]\n  * `165` - Battery cell voltage, 60-90s before entering charge state. [chargeVpcStart]\n  * `166` - Battery cell voltage, 60-90s before entering discharge state. [chargeVpcEnd]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `182` - Total time in equalize charging phase. Only relevant if an Access battery charger is connected. [equalizeTime]\n  * `183` - Ah being charged during equalize. Only relevant if an Access battery charger is used. [equalizeAh]\n  * `184` - Wh being charged during equalize. Only relevant if an Access battery charger is used. [equalizeWh]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `2` - Type of battery [batteryType]\n  * `203` - Charger temperature when battery connected before start of charging. [chargerTemperatureStart]\n  * `204` - Charger temperature when battery disconnected. [chargerTemperatureEnd]\n  * `205` - Maximum charger temperature between charge start time and charge end time. [chargerTemperatureMax]\n  * `207` - Event log index at start of charge [eventIndexStart]\n  * `208` - Event log index at end of charge [eventIndexEnd]\n  * `210` - Time when charger ouput power is turned on. [chargeTime]\n  * `220` - Array of device status [deviceStatus]\n  * `24` - Current drained from the battery during charging. [baseLoad]\n  * `25` - Resistance in the cables between charger and battery. [cableResistance]\n  * `26` - Charging algorithm identifier. [algorithmNumber]\n  * `389` - Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]\n  * `416` - Max power during charge. [LogPeakPower]\n  * `417` - Consumed mains power. [LogConsumedKWh]\n  * `5` - Number of cells of the battery [cells]\n  * `50` - Calculated actual battery capacity. [actualCapacity]\n"
             },
             "example": [
               1,
@@ -5652,7 +5515,6 @@
               123,
               127,
               129,
-              130,
               160,
               161,
               165,
@@ -5686,7 +5548,7 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `1` [deviceID] - INT32 [0 - ∞]\n  * `118` [chargeAhP] - INT32 [0 - ∞])\n  * `119` [forkLiftId] - INT32 [0 - ∞]\n  * `120` [batterySerialNumber] - INT64 [0 - ∞]\n  * `121` [reserved] -  [∞ - ∞]\n  * `123` [chargingMode] - INT32 [0 - 4]\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `130` [algorithmVersion] - INT32 [0 - ∞]\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `187` [index] - INT32 [0 - ∞]\n  * `2` [batteryType] - INT32 [0 - 1]\n  * `203` [chargerTemperatureStart] - DOUBLE [∞ - ∞])\n  * `204` [chargerTemperatureEnd] - DOUBLE [∞ - ∞])\n  * `205` [chargerTemperatureMax] - DOUBLE [∞ - ∞])\n  * `207` [eventIndexStart] - INT32 [0 - ∞]\n  * `208` [eventIndexEnd] - INT32 [0 - ∞]\n  * `210` [chargeTime] - INT32 [0 - ∞])\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `389` [notavailable] - INT64 [0 - ∞]\n  * `416` [LogPeakPower] - INT32 [0 - ∞] (divided by 0.1)\n  * `417` [LogConsumedKWh] - INT32 [0 - ∞])\n  * `5` [cells] - INT32 [0 - ∞]\n  * `50` [actualCapacity] - DOUBLE [0 - ∞])\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `1` [deviceID] - INT32 [0 - ∞]\n  * `118` [chargeAhP] - INT32 [0 - ∞])\n  * `119` [forkLiftId] - INT32 [0 - ∞]\n  * `120` [batterySerialNumber] - INT64 [0 - ∞]\n  * `121` [reserved] - INT32 [∞ - ∞]\n  * `123` [chargingMode] - INT32 [0 - 4]\n  * `127` [activeAlarms] - INT32[] [0 - 231]\n  * `129` [algorithmName] - STRING [∞ - ∞]\n  * `160` [chargeTimeStart] - DATETIME [0 - ∞])\n  * `161` [chargeTimeEnd] - DATETIME [0 - ∞])\n  * `165` [chargeVpcStart] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `166` [chargeVpcEnd] - DOUBLE [0 - ∞] (divided by 0.01)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `182` [equalizeTime] - INT32 [0 - ∞])\n  * `183` [equalizeAh] - INT32 [0 - ∞])\n  * `184` [equalizeWh] - INT32 [0 - ∞])\n  * `187` [index] - INT32 [0 - ∞]\n  * `2` [batteryType] - INT32 [0 - 1]\n  * `203` [chargerTemperatureStart] - DOUBLE [∞ - ∞])\n  * `204` [chargerTemperatureEnd] - DOUBLE [∞ - ∞])\n  * `205` [chargerTemperatureMax] - DOUBLE [∞ - ∞])\n  * `207` [eventIndexStart] - INT32 [0 - ∞]\n  * `208` [eventIndexEnd] - INT32 [0 - ∞]\n  * `210` [chargeTime] - INT32 [0 - ∞])\n  * `220` [deviceStatus] - INT32[] [0 - 74]\n  * `24` [baseLoad] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `25` [cableResistance] - DOUBLE [0 - ∞] (divided by 0.001)\n  * `26` [algorithmNumber] - INT32 [0 - 65535]\n  * `389` [notavailable] - INT64 [0 - ∞]\n  * `416` [LogPeakPower] - INT32 [0 - ∞] (divided by 0.1)\n  * `417` [LogConsumedKWh] - INT32 [0 - ∞])\n  * `5` [cells] - INT32 [0 - ∞]\n  * `50` [actualCapacity] - DOUBLE [0 - ∞])\n",
                 "oneOf": [
                   {
                     "type": "string"
@@ -5770,27 +5632,26 @@
                 "description": "Amount of capacity left in the battery. [stateOfCharge])"
               },
               "45": {
-                "type": "integer",
-                "format": "int64",
-                "description": "Decive time. [deviceTime]"
+                "type": "string",
+                "description": "Device time in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [deviceTime]"
               },
               "46": {
                 "type": "number",
-                "description": "Measured battery current. [batteryCurrent] (divided by 0,001)"
+                "description": "Measured battery current. [batteryCurrent] (divided by 0.001)"
               },
               "47": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Measured battery voltage. [batteryVoltage] (divided by 0,001)"
+                "description": "Measured battery voltage. [batteryVoltage] (divided by 0.001)"
               },
               "48": {
                 "type": "number",
-                "description": "Measured battery temperature. [batteryTemperature] (divided by 0,1)"
+                "description": "Measured battery temperature. [batteryTemperature] (divided by 0.1)"
               },
               "49": {
                 "type": "number",
-                "description": "Average battery lifetime temperature. [batteryLifeTempAverage] (divided by 0,1)"
+                "description": "Average battery lifetime temperature. [batteryLifeTempAverage] (divided by 0.1)"
               },
               "50": {
                 "type": "number",
@@ -5934,7 +5795,8 @@
                 "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
               },
               "70": {
-                "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
+                "type": "string",
+                "description": "The timestamp of the last history log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [historyLogDate]"
               },
               "71": {
                 "type": "integer",
@@ -5968,13 +5830,13 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The current middle voltage [middleVoltage] (divided by 0,001)"
+                "description": "The current middle voltage [middleVoltage] (divided by 0.001)"
               },
               "81": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The current electrolyte voltage [electrolyteVoltage] (divided by 0,001)"
+                "description": "The current electrolyte voltage [electrolyteVoltage] (divided by 0.001)"
               },
               "127": {
                 "type": "array",
@@ -5989,11 +5851,12 @@
                 "description": "Array of active alarm codes [activeAlarms]"
               },
               "128": {
-                "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
+                "type": "string",
+                "description": "The Timestamp of the last event log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [eventLogDate]"
               },
               "219": {
                 "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+                "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
               },
               "220": {
                 "type": "array",
@@ -6014,7 +5877,52 @@
                 "exclusiveMinimum": true,
                 "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
               }
-            }
+            },
+            "required": [
+              "127",
+              "128",
+              "219",
+              "220",
+              "35",
+              "36",
+              "38",
+              "389",
+              "39",
+              "44",
+              "45",
+              "46",
+              "47",
+              "48",
+              "49",
+              "50",
+              "51",
+              "52",
+              "53",
+              "54",
+              "55",
+              "56",
+              "57",
+              "58",
+              "59",
+              "6",
+              "60",
+              "61",
+              "62",
+              "63",
+              "64",
+              "65",
+              "66",
+              "67",
+              "68",
+              "69",
+              "70",
+              "71",
+              "72",
+              "73",
+              "74",
+              "80",
+              "81"
+            ]
           }
         }
       },
@@ -6351,7 +6259,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Device numerical identification;configurable. [deviceID]"
+                "description": "Device numerical identification, configurable. [deviceID]"
               },
               "5": {
                 "type": "integer",
@@ -6364,19 +6272,19 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Capacity in Ah of the battery [capacity] (in Ah)"
+                "description": "Capacity in Ah of the battery [capacity])"
               },
               "24": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Current drained from the battery during charging. [baseLoad] (in A)"
+                "description": "Current drained from the battery during charging. [baseLoad] (divided by 0.001)"
               },
               "25": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Resistance in the cables between charger and battery. [cableResistance] (in Ω)"
+                "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0.001)"
               },
               "26": {
                 "type": "integer",
@@ -6392,19 +6300,18 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware type number;what kind of firmware is on the device [firmwareType]"
+                "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
               },
               "39": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersion]"
+                "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
               },
               "45": {
-                "type": "integer",
-                "format": "int64",
-                "description": "Decive time. [deviceTime]"
+                "type": "string",
+                "description": "Device time in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [deviceTime]"
               },
               "53": {
                 "type": "integer",
@@ -6446,14 +6353,14 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total time spent charging since reset of statistics. [totalChargeTime] (in s)"
+                "description": "Total time spent charging since reset of statistics. [totalChargeTime])"
               },
               "64": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Ah charged since reset of statistics. [totalChargeAh] (in Ah)"
+                "description": "Total number of Ah charged since reset of statistics. [totalChargeAh])"
               },
               "68": {
                 "type": "integer",
@@ -6467,14 +6374,11 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The index of the latest history log;logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
+                "description": "The index of the latest history log, logs are stored in a circular buffer. To read logs the index is needed. [historyLogIndex]"
               },
               "70": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The timestamp of the last history log in POSIX format [historyLogDate]"
+                "type": "string",
+                "description": "The timestamp of the last history log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [historyLogDate]"
               },
               "71": {
                 "type": "integer",
@@ -6488,7 +6392,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The index of the latest event log;logs are stored in a circular buffer [eventLogIndex]"
+                "description": "The index of the latest event log, logs are stored in a circular buffer [eventLogIndex]"
               },
               "73": {
                 "type": "integer",
@@ -6502,51 +6406,37 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The index of the latest instant log;logs are stored in a circular buffer [instantLogIndex]"
+                "description": "The index of the latest instant log, logs are stored in a circular buffer [instantLogIndex]"
               },
               "75": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Wh charged from mains supply since reset of statistics. [totalAcPowerConsumption] (in Wh)"
+                "description": "Total number of Wh charged from mains supply since reset of statistics. [totalAcPowerConsumption])"
               },
               "76": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Momentary mains power consumption. [acPowerConsumption] (in VA)"
+                "description": "Momentary mains power consumption. [acPowerConsumption])"
               },
               "88": {
                 "type": "number",
-                "description": "Momentary charger heat sink temperature. [chargerTemperature] (in °C)"
+                "description": "Momentary charger heat sink temperature. [chargerTemperature] (divided by 0.1)"
               },
               "90": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Momentary charger measured current. [chargerCurrent] (in A)"
+                "description": "Momentary charger measured current. [chargerCurrent] (divided by 0.001)"
               },
               "91": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Momentary charger measured voltage. [chargerVoltage] (in V)"
-              },
-              "93": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The firmware type number;what kind of firmware is on the device [firmwareTypeRadio]"
-              },
-              "94": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersionRadio]"
+                "description": "Momentary charger measured voltage. [chargerVoltage] (divided by 0.001)"
               },
               "127": {
                 "type": "array",
@@ -6561,11 +6451,8 @@
                 "description": "Array of active alarm codes [activeAlarms]"
               },
               "128": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The Timestamp of the last event log in POSIX format [eventLogDate]"
+                "type": "string",
+                "description": "The Timestamp of the last event log in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [eventLogDate]"
               },
               "129": {
                 "type": "string",
@@ -6576,11 +6463,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The version of the charging algorithm;can be NULL [algorithmVersion]"
-              },
-              "217": {
-                "type": "string",
-                "description": "The network restrictions as channel:pan ID ex 11:22; if all [networkRestriction]"
+                "description": "The version of the charging algorithm, can be NULL [algorithmVersion]"
               },
               "218": {
                 "type": "integer",
@@ -6591,7 +6474,7 @@
               },
               "219": {
                 "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+                "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
               },
               "220": {
                 "type": "array",
@@ -6610,14 +6493,14 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Measured primary voltage [UAC_meas] (in V)"
+                "description": "Measured primary voltage [UAC_meas] (divided by 0.001)"
               },
               "389": {
                 "type": "integer",
                 "format": "int64",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Serial number of the device;8 bytes. MP serial numbers are 5 bytes. [notavailable]"
+                "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
               }
             }
           }
@@ -6923,43 +6806,33 @@
           "data": {
             "type": "object",
             "properties": {
-              "10": {
-                "type": "integer",
-                "format": "int32",
-                "description": "Unique device serial number [serialNumber]"
-              },
               "38": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware type number;what kind of firmware is on the device [firmwareType]"
+                "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
               },
               "39": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersion]"
-              },
-              "45": {
-                "type": "integer",
-                "format": "int64",
-                "description": "Decive time. [deviceTime]"
+                "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
               },
               "93": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware type number;what kind of firmware is on the device [firmwareTypeRadio]"
+                "description": "The firmware type number, what kind of firmware is on the device [firmwareTypeRadio]"
               },
               "94": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware version number;which version of the firmware type is on the device [firmwareVersionRadio]"
+                "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersionRadio]"
               },
               "96": {
                 "type": "string",
@@ -6982,7 +6855,7 @@
                 "format": "int64",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The free storage space [freeStorage] (in Mb)"
+                "description": "The free storage space [freeStorage])"
               },
               "105": {
                 "type": "integer",
@@ -7021,7 +6894,7 @@
               },
               "219": {
                 "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+                "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
               },
               "220": {
                 "type": "array",
@@ -7041,8 +6914,35 @@
                 "minimum": 0,
                 "exclusiveMinimum": true,
                 "description": "Root filesystem release [rootFsRelease]"
+              },
+              "389": {
+                "type": "integer",
+                "format": "int64",
+                "minimum": 0,
+                "exclusiveMinimum": true,
+                "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
               }
-            }
+            },
+            "required": [
+              "101",
+              "102",
+              "103",
+              "104",
+              "105",
+              "106",
+              "107",
+              "108",
+              "127",
+              "219",
+              "220",
+              "248",
+              "38",
+              "389",
+              "39",
+              "93",
+              "94",
+              "96"
+            ]
           }
         }
       },
@@ -7194,7 +7094,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Device numerical identification;configurable. [deviceID]"
+                "description": "Device numerical identification, configurable. [deviceID]"
               },
               "2": {
                 "type": "integer",
@@ -7212,9 +7112,9 @@
               "4": {
                 "type": "integer",
                 "format": "int32",
-                "minimum": 0,
+                "minimum": 1,
                 "exclusiveMinimum": true,
-                "maximum": 1,
+                "maximum": 2,
                 "exclusiveMaximum": true,
                 "description": "The type of BMU model [bmuType]"
               },
@@ -7229,7 +7129,7 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Capacity in Ah of the battery [capacity] (in Ah)"
+                "description": "Capacity in Ah of the battery [capacity])"
               },
               "7": {
                 "type": "integer",
@@ -7243,12 +7143,12 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The total Ah available for the life time of the battery [ahAvailable] (in Ah)"
+                "description": "The total Ah available for the life time of the battery [ahAvailable])"
               },
               "9": {
                 "type": "integer",
                 "format": "int32",
-                "description": "The amount of seconds between instant logs;0 = off [instantLogPeriod]"
+                "description": "The amount of seconds between instant logs, 0 = off [instantLogPeriod]"
               },
               "11": {
                 "type": "boolean",
@@ -7264,7 +7164,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 3623.056,
                 "exclusiveMaximum": true,
-                "description": "The maximum battery temperature [temperatureMax] (in °C)"
+                "description": "The maximum battery temperature [temperatureMax])"
               },
               "15": {
                 "type": "integer",
@@ -7283,7 +7183,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Charger efficiency [chargeEfficiency] (in %)"
+                "description": "Charger efficiency [chargeEfficiency])"
               },
               "18": {
                 "type": "integer",
@@ -7306,7 +7206,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Threshold for low state of charge level [stateOfChargeLow] (in %)"
+                "description": "Threshold for low state of charge level [stateOfChargeLow])"
               },
               "21": {
                 "type": "boolean",
@@ -7325,13 +7225,13 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Current drained from the battery during charging. [baseLoad] (in A)"
+                "description": "Current drained from the battery during charging. [baseLoad] (divided by 0.001)"
               },
               "25": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Resistance in the cables between charger and battery. [cableResistance] (in Ω)"
+                "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0.001)"
               },
               "26": {
                 "type": "integer",
@@ -7348,7 +7248,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 255,
                 "exclusiveMaximum": true,
-                "description": "Limit for voltage balance calculation [voltageBalanceLimit] (in V)"
+                "description": "Limit for voltage balance calculation [voltageBalanceLimit] (divided by 0.01)"
               },
               "28": {
                 "type": "boolean",
@@ -7374,7 +7274,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 255,
                 "exclusiveMaximum": true,
-                "description": "Parameter 1 for the equalize function [equalizeParameter] (in Ah)"
+                "description": "Parameter 1 for the equalize function [equalizeParameter])"
               },
               "32": {
                 "type": "integer",
@@ -7423,16 +7323,53 @@
               },
               "219": {
                 "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+                "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
               },
               "324": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Discharged Ah before installation [AhUsed] (in Ah)"
+                "description": "Discharged Ah before installation [AhUsed])"
               }
-            }
+            },
+            "required": [
+              "1",
+              "11",
+              "12",
+              "13",
+              "15",
+              "16",
+              "17",
+              "18",
+              "19",
+              "2",
+              "20",
+              "21",
+              "219",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28",
+              "29",
+              "3",
+              "30",
+              "31",
+              "32",
+              "324",
+              "33",
+              "35",
+              "36",
+              "37",
+              "4",
+              "5",
+              "6",
+              "7",
+              "8",
+              "9"
+            ]
           }
         },
         "required": [
@@ -7455,7 +7392,7 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Device numerical identification;configurable. [deviceID]"
+                "description": "Device numerical identification, configurable. [deviceID]"
               },
               "2": {
                 "type": "integer",
@@ -7477,12 +7414,12 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Capacity in Ah of the battery [capacity] (in Ah)"
+                "description": "Capacity in Ah of the battery [capacity])"
               },
               "9": {
                 "type": "integer",
                 "format": "int32",
-                "description": "The amount of seconds between instant logs;0 = off [instantLogPeriod]"
+                "description": "The amount of seconds between instant logs, 0 = off [instantLogPeriod]"
               },
               "18": {
                 "type": "integer",
@@ -7502,13 +7439,13 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Current drained from the battery during charging. [baseLoad] (in A)"
+                "description": "Current drained from the battery during charging. [baseLoad] (divided by 0.001)"
               },
               "25": {
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Resistance in the cables between charger and battery. [cableResistance] (in Ω)"
+                "description": "Resistance in the cables between charger and battery. [cableResistance] (divided by 0.001)"
               },
               "26": {
                 "type": "integer",
@@ -7535,7 +7472,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 255,
                 "exclusiveMaximum": true,
-                "description": "Parameter 1 for the equalize function [equalizeParameter] (in Ah)"
+                "description": "Parameter 1 for the equalize function [equalizeParameter])"
               },
               "32": {
                 "type": "integer",
@@ -7622,7 +7559,7 @@
                 "description": "If time restrictions shall be enabled [timeRestriction]"
               },
               "79": {
-                "description": "A list of all charging restrictions;limited to 3 charging restrictions per day [chargingRestrictions]"
+                "description": "A list of all charging restrictions, limited to 3 charging restrictions per day [chargingRestrictions]"
               },
               "84": {
                 "type": "integer",
@@ -7640,18 +7577,18 @@
                 "exclusiveMinimum": true,
                 "maximum": 1,
                 "exclusiveMaximum": true,
-                "description": "Remote out;relay active criteria for BBC [remoteOutBbcVar]"
+                "description": "Remote out, relay active criteria for BBC [remoteOutBbcVar]"
               },
               "97": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Configuration for selected engine code;from a list of engines [engineCode]"
+                "description": "Configuration for selected engine code, from a list of engines [engineCode]"
               },
               "98": {
                 "type": "number",
-                "description": "Charger rated nominal current. [iDcLimit] (in A)"
+                "description": "Charger rated nominal current. [iDcLimit])"
               },
               "123": {
                 "type": "integer",
@@ -7664,7 +7601,7 @@
               },
               "219": {
                 "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
+                "description": "ISO 8601 extended timestamp for when device data is read, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [timestamp]"
               },
               "222": {
                 "type": "integer",
@@ -7674,18 +7611,10 @@
                 "description": "Power group [powerGroup]"
               },
               "223": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "Mains current limit [mainsCurrentLimit] (in A)"
+                "description": "Mains current limit [mainsCurrentLimit])"
               },
               "224": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "Mains power limit [mainsPowerLimit] (in VA)"
+                "description": "Mains power limit [mainsPowerLimit])"
               },
               "226": {
                 "type": "integer",
@@ -7694,7 +7623,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Charging voltage limit (mV) [chargingVoltageLimit] (in V)"
+                "description": "Charging voltage limit (mV) [chargingVoltageLimit] (divided by 0.001)"
               },
               "227": {
                 "type": "integer",
@@ -7703,7 +7632,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Display contrast (%) [displayContrast] (in %)"
+                "description": "Display contrast (%) [displayContrast])"
               },
               "228": {
                 "type": "integer",
@@ -7712,7 +7641,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Led brightness max (%) [ledBrightnessMax] (in %)"
+                "description": "Led brightness max (%) [ledBrightnessMax])"
               },
               "229": {
                 "type": "integer",
@@ -7721,7 +7650,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Led brightness dim (%) [ledBrightnessDim] (in %)"
+                "description": "Led brightness dim (%) [ledBrightnessDim])"
               },
               "230": {
                 "type": "integer",
@@ -7829,14 +7758,14 @@
                 "exclusiveMinimum": true,
                 "maximum": 6,
                 "exclusiveMaximum": true,
-                "description": "CAN bit rate [canBps] (in kbps)"
+                "description": "CAN bit rate [canBps])"
               },
               "243": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total allowed power consumption Sac(VA) for a DPL group [dplPowerLimitTotal] (in VA)"
+                "description": "Total allowed power consumption Sac(VA) for a DPL group [dplPowerLimitTotal])"
               },
               "244": {
                 "type": "integer",
@@ -7863,7 +7792,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Slave charger default power limit (no master connection) [dplSacLimit_default] (in %)"
+                "description": "Slave charger default power limit (no master connection) [dplSacLimit_default])"
               },
               "254": {
                 "type": "integer",
@@ -7924,7 +7853,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 6,
                 "exclusiveMaximum": true,
-                "description": "Extracharge;day [extraChargeVar]"
+                "description": "Extracharge, day [extraChargeVar]"
               },
               "261": {
                 "type": "integer",
@@ -7933,7 +7862,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 23,
                 "exclusiveMaximum": true,
-                "description": "Extracharge;hour [extraChargeVar2]"
+                "description": "Extracharge, hour [extraChargeVar2]"
               },
               "262": {
                 "type": "integer",
@@ -7942,7 +7871,7 @@
                 "exclusiveMinimum": true,
                 "maximum": 59,
                 "exclusiveMaximum": true,
-                "description": "Extracharge;minute [extraChargeVar3]"
+                "description": "Extracharge, minute [extraChargeVar3]"
               },
               "263": {
                 "type": "integer",
@@ -7997,7 +7926,7 @@
               },
               "272": {
                 "type": "number",
-                "description": "Default battery temperature to be used when no real battery temperature is measured [batteryTemperatureDefault] (in °C)"
+                "description": "Default battery temperature to be used when no real battery temperature is measured [batteryTemperatureDefault] (divided by 0.1)"
               },
               "275": {
                 "type": "boolean",
@@ -8010,137 +7939,88 @@
                 "exclusiveMinimum": true,
                 "maximum": 1,
                 "exclusiveMaximum": true,
-                "description": "0 = Off;1= On [notavailable]"
+                "description": "0 = Off, 1= On [notavailable]"
               }
             },
             "required": [
-              "timestamp"
+              "1",
+              "123",
+              "18",
+              "19",
+              "2",
+              "219",
+              "222",
+              "223",
+              "224",
+              "226",
+              "227",
+              "228",
+              "229",
+              "230",
+              "231",
+              "232",
+              "233",
+              "234",
+              "235",
+              "236",
+              "237",
+              "238",
+              "239",
+              "24",
+              "240",
+              "241",
+              "242",
+              "243",
+              "244",
+              "245",
+              "246",
+              "25",
+              "254",
+              "255",
+              "256",
+              "257",
+              "258",
+              "259",
+              "26",
+              "260",
+              "261",
+              "262",
+              "263",
+              "264",
+              "265",
+              "267",
+              "268",
+              "269",
+              "270",
+              "271",
+              "272",
+              "275",
+              "30",
+              "31",
+              "32",
+              "33",
+              "34",
+              "35",
+              "36",
+              "37",
+              "406",
+              "42",
+              "43",
+              "5",
+              "6",
+              "77",
+              "78",
+              "79",
+              "84",
+              "85",
+              "9",
+              "97",
+              "98"
             ]
           }
         }
       },
-      "ResponsePostConfigGatewaySchema": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string",
-            "description": "success or fail"
-          },
-          "data": {
-            "type": "object",
-            "properties": {
-              "1": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "Device numerical identification;configurable. [deviceID]"
-              },
-              "19": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "Security code for second level security [securityCode2]"
-              },
-              "109": {
-                "type": "string",
-                "description": "The name of the device [deviceName]"
-              },
-              "110": {
-                "type": "string",
-                "description": "The cloud URL [cloudUrl]"
-              },
-              "113": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The scan for nodes interval [scanNetworkInterval] (in ms)"
-              },
-              "114": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The collect data minimum interval [collectDataInterval] (in ms)"
-              },
-              "116": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "The periodic update interval [periodicUpdateInterval] (in ms)"
-              },
-              "124": {
-                "type": "boolean",
-                "description": "If the debug logs is active [debugLog]"
-              },
-              "125": {
-                "type": "boolean",
-                "description": "If the Micropower ACCESS debug logs is active [debugMpaLog]"
-              },
-              "131": {
-                "type": "string",
-                "description": "The assigned Ethernet IP address [ethernetAddress]"
-              },
-              "132": {
-                "type": "boolean",
-                "description": "If the Ethernet IP address is static [ethernetStatic]"
-              },
-              "189": {
-                "type": "string",
-                "description": "The assigned Ethernet netmask [ethernetNetmask]"
-              },
-              "206": {
-                "type": "string",
-                "description": "Assigned IP address of the ethernet gateway [ethernetGateway]"
-              },
-              "212": {
-                "type": "string",
-                "description": "The wireless IP address [wirelessAddress]"
-              },
-              "213": {
-                "type": "string",
-                "description": "The wireless netmask [wirelessNetmask]"
-              },
-              "214": {
-                "type": "string",
-                "description": "The wireless SSID [wirelessSsid]"
-              },
-              "215": {
-                "type": "string",
-                "description": "The wireless password [wirelessPassword]"
-              },
-              "216": {
-                "type": "integer",
-                "format": "int32",
-                "description": "The interval for removing nodes [removeNodeInterval]"
-              },
-              "217": {
-                "type": "string",
-                "description": "The network restrictions as channel:pan ID ex 11:22; if all [networkRestriction]"
-              },
-              "219": {
-                "type": "string",
-                "description": "ISO 8601 extended timestamp for when device data is read [timestamp]"
-              },
-              "225": {
-                "type": "string",
-                "description": "The node restrictions;the node to be focused on; if all [nodeRestriction]"
-              },
-              "247": {
-                "type": "integer",
-                "format": "int32",
-                "minimum": 0,
-                "exclusiveMinimum": true,
-                "description": "CAN bus speed in bits per second [canBitRate] (in bps)"
-              }
-            }
-          }
-        }
-      },
-      "ResponseGetConfigGatewaySchema": {
+      "ResponseConfigGatewaySchema": {
         "type": "object",
         "properties": {
           "status": {
@@ -8394,7 +8274,8 @@
             "description": "The event type [eventType]"
           },
           "191": {
-            "description": "The time when log was written [time])"
+            "type": "string",
+            "description": "The time when log was written, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [time])"
           },
           "389": {
             "type": "integer",
@@ -8404,11 +8285,19 @@
             "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]"
           },
           "411": {
+            "type": "integer",
+            "format": "int32",
+            "minimum": 0,
+            "exclusiveMinimum": true,
             "description": "ID of the hardware that the firmware is designed for.  [notavailable]"
           },
           "535": {
             "type": "integer",
             "format": "int32",
+            "minimum": 0,
+            "exclusiveMinimum": true,
+            "maximum": 231,
+            "exclusiveMaximum": true,
             "description": "Alarm code [notavailable]"
           },
           "536": {
@@ -8421,11 +8310,12 @@
             "description": "For unknown alarm codes this can be used to propagate info [notavailable]"
           },
           "538": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
+            "type": "integer",
+            "format": "int32",
+            "minimum": 5,
+            "exclusiveMinimum": true,
+            "maximum": 26,
+            "exclusiveMaximum": true,
             "description": "Unique identifier for device data fields [notavailable]"
           },
           "541": {
@@ -8438,7 +8328,7 @@
           },
           "544": {
             "type": "string",
-            "description": "ISO 8601 Time before being set by event [notavailable]"
+            "description": "ISO 8601 Time before being set by event in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [notavailable]"
           },
           "545": {
             "type": "integer",
@@ -8483,20 +8373,14 @@
             "description": "The boot firmware version number [notavailable]"
           },
           "554": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "description": "Generic data to represent the new float value [notavailable] (divided by nan)"
+            "type": "integer",
+            "format": "int32",
+            "description": "Generic data to represent the new float value [notavailable]"
           },
           "555": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            },
-            "description": "Generic data to represent the old float value [notavailable] (divided by nan)"
+            "type": "integer",
+            "format": "int32",
+            "description": "Generic data to represent the old float value [notavailable]"
           }
         },
         "required": [
@@ -8513,7 +8397,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `191` - The time when log was written [time]\n  * `192` - Average current between two instant log samples.  [currentAverage]\n  * `193` - Minimum current between two instant log samples. [currentMin]\n  * `194` - Maximum current between two instant log samples. [currentMax]\n  * `195` - Average battery voltage between two instant log samples.  [voltageAverage]\n  * `196` - Minimum voltage between two instant log samples. [voltageMin]\n  * `197` - Maximum voltage between two instant log samples. [voltageMax]\n  * `198` - Average battery temperature between two instant log samples.  [temperatureAverage]\n  * `199` - Minimum battery temperature between two instant log samples. [temperatureMin]\n  * `200` - Maximum battery temperature between two instant log samples. [temperatureMax]\n  * `201` - Average battery state of charge between two instant log samples (BMU2 only) [stateOfCharge]\n  * `202` - Average center voltage between two instant log samples. [middleVoltageAverage]\n  * `9` - The amount of seconds between instant logs, 0 = off [instantLogPeriod]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `191` - The time when log was written, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [time]\n  * `192` - Average current between two instant log samples.  [currentAverage]\n  * `193` - Minimum current between two instant log samples. [currentMin]\n  * `194` - Maximum current between two instant log samples. [currentMax]\n  * `195` - Average battery voltage between two instant log samples.  [voltageAverage]\n  * `196` - Minimum voltage between two instant log samples. [voltageMin]\n  * `197` - Maximum voltage between two instant log samples. [voltageMax]\n  * `198` - Average battery temperature between two instant log samples.  [temperatureAverage]\n  * `199` - Minimum battery temperature between two instant log samples. [temperatureMin]\n  * `200` - Maximum battery temperature between two instant log samples. [temperatureMax]\n  * `201` - Average battery state of charge between two instant log samples (BMU2 only) [stateOfCharge]\n  * `202` - Average center voltage between two instant log samples. [middleVoltageAverage]\n  * `9` - The amount of seconds between instant logs, 0 = off [instantLogPeriod]\n"
             },
             "example": [
               187,
@@ -8560,7 +8444,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `191` - The time when log was written [time]\n  * `88` - Momentary charger heat sink temperature. [chargerTemperature]\n  * `9` - The amount of seconds between instant logs, 0 = off [instantLogPeriod]\n  * `90` - Momentary charger measured current. [chargerCurrent]\n  * `91` - Momentary charger measured voltage. [chargerVoltage]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `127` - Array of active alarm codes [activeAlarms]\n  * `187` - Index of the history, event or instant log since start of operation. [index]\n  * `191` - The time when log was written, in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1970 with local time offset [time]\n  * `88` - Momentary charger heat sink temperature. [chargerTemperature]\n  * `9` - The amount of seconds between instant logs, 0 = off [instantLogPeriod]\n  * `90` - Momentary charger measured current. [chargerCurrent]\n  * `91` - Momentary charger measured voltage. [chargerVoltage]\n"
             },
             "example": [
               127,
@@ -8692,7 +8576,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `162` - Time between Charge start time and Charge end time. [chargeTime]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `504` - Number of cycle logs written [cycleNr]\n  * `505` - Time when battery was disconnected in ms [dischargeTimeStartMs]\n  * `506` - Time when battery was disconnected in days [dischargeTimeStartDays]\n  * `507` - Duration of discharge in minutes [dischargeTime]\n  * `508` - Time when battery was connected in ms [chargeTimeStartMs]\n  * `509` - Time when battery was connected in days [chargeTimeStartDays]\n  * `510` - Bitcoded charge type  [chargeType]\n  * `511` - Bitcoded error list [cycleError1]\n  * `512` - Bitcoded error list [cycleError2]\n  * `513` - Bitcoded error list [cycleError3]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `141` - State of charge at start of discharge. [dischargeStateOfChargeStart]\n  * `145` - The maximum battery temperature being reached during discharge. [dischargeBatteryTemperatureMax]\n  * `146` - The minimum battery temperature being reached during discharge. [dischargeBatteryTemperatureMin]\n  * `147` - Number of Ah discharged between discharge start time and charge start time. [dischargeAh]\n  * `148` - Number of Wh discharged between discharge start time and charge start time. [dischargeWh]\n  * `155` - Duration of current regeneration during discharge. [dischargeRegeneratingTime]\n  * `156` - Number of Ah being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedAh]\n  * `157` - Number of Wh being regenerated between Discharge start time and Charge start time. [dischargeRegeneratedWh]\n  * `162` - Time between Charge start time and Charge end time. [chargeTime]\n  * `168` - State of charge at start of charge. [chargeStateOfChargeStart]\n  * `169` - State of charge at end of charge. [chargeStateOfChargeEnd]\n  * `172` - The maximum battery temperature being reached during charge. [chargeBatteryTemperatureMax]\n  * `173` - The minimum battery temperature being reached during charge. [chargeBatteryTemperatureMin]\n  * `174` - Ah charged between Charge start time and Charge end time. [chargeAh]\n  * `175` - Wh charged between Charge start time and Charge end time. [chargeWh]\n  * `501` - Battery phase  [bmsPhase]\n  * `504` - Number of cycle logs written [cycleNr]\n  * `505` - Time when battery was disconnected in ms [dischargeTimeStartMs]\n  * `506` - Time when battery was disconnected in days [dischargeTimeStartDays]\n  * `507` - Duration of discharge in minutes [dischargeTime]\n  * `508` - Time when battery was connected in ms [chargeTimeStartMs]\n  * `509` - Time when battery was connected in days [chargeTimeStartDays]\n  * `510` - Bitcoded charge type  [chargeType]\n  * `556` - nan [notavailable]\n  * `557` - Alarm (possibly an alarm group) [notavailable]\n  * `558` - Severity of the alarm (not available in BMU/Charger) [notavailable]\n  * `559` - nan [notavailable]\n  * `560` - List with amount of capacity left in the battery. [notavailable]\n"
             },
             "example": [
               141,
@@ -8710,6 +8594,7 @@
               173,
               174,
               175,
+              501,
               504,
               505,
               506,
@@ -8717,9 +8602,11 @@
               508,
               509,
               510,
-              511,
-              512,
-              513
+              556,
+              557,
+              558,
+              559,
+              560
             ]
           },
           "rows": {
@@ -8727,10 +8614,11 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `162` [chargeTime] - INT32 [∞ - ∞]\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `504` [cycleNr] - INT32 [0 - ∞]\n  * `505` [dischargeTimeStartMs] - INT32 [0 - ∞])\n  * `506` [dischargeTimeStartDays] - INT32 [0 - ∞])\n  * `507` [dischargeTime] - INT32 [0 - ∞])\n  * `508` [chargeTimeStartMs] - INT32 [0 - ∞])\n  * `509` [chargeTimeStartDays] - INT32 [0 - ∞])\n  * `510` [chargeType] - INT32 [0 - 2]\n  * `511` [cycleError1] - INT32 [∞ - ∞]\n  * `512` [cycleError2] - INT32 [∞ - ∞]\n  * `513` [cycleError3] - INT32 [∞ - ∞]\n",
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `141` [dischargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `145` [dischargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `146` [dischargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `147` [dischargeAh] - INT32 [0 - ∞])\n  * `148` [dischargeWh] - INT32 [0 - ∞])\n  * `155` [dischargeRegeneratingTime] - INT32 [0 - ∞])\n  * `156` [dischargeRegeneratedAh] - INT32 [0 - ∞])\n  * `157` [dischargeRegeneratedWh] - INT32 [0 - ∞])\n  * `162` [chargeTime] - INT32 [∞ - ∞]\n  * `168` [chargeStateOfChargeStart] - INT32 [0 - ∞])\n  * `169` [chargeStateOfChargeEnd] - INT32 [0 - ∞])\n  * `172` [chargeBatteryTemperatureMax] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `173` [chargeBatteryTemperatureMin] - DOUBLE [∞ - ∞] (divided by 0.1)\n  * `174` [chargeAh] - INT32 [0 - ∞])\n  * `175` [chargeWh] - INT32 [0 - ∞])\n  * `501` [bmsPhase] - INT32[] [∞ - ∞]\n  * `504` [cycleNr] - INT32 [0 - ∞]\n  * `505` [dischargeTimeStartMs] - INT32 [0 - ∞])\n  * `506` [dischargeTimeStartDays] - INT32 [0 - ∞])\n  * `507` [dischargeTime] - INT32 [0 - ∞])\n  * `508` [chargeTimeStartMs] - INT32 [0 - ∞])\n  * `509` [chargeTimeStartDays] - INT32 [0 - ∞])\n  * `510` [chargeType] - INT32 [0 - 2]\n  * `556` [notavailable] - INT32[] [0 - 2]\n  * `557` [notavailable] - INT32[] [0 - 3]\n  * `558` [notavailable] - INT32[] [0 - 32768]\n  * `559` [notavailable] - INT32[] [0 - 255]\n  * `560` [notavailable] - INT32[] [0 - 100]\n",
                 "oneOf": [
                   {
-                    "type": "integer"
+                    "type": "integer",
+                    "format": "int32"
                   },
                   {
                     "type": "number"
@@ -8748,33 +8636,33 @@
                 0,
                 0,
                 0,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 171,
                 67479000,
                 13382,
                 3,
-                null,
-                null,
-                null,
+                0,
+                0,
+                0,
                 0,
                 11,
                 0
               ],
               [
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
-                null,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 2,
                 62,
                 0,
@@ -8783,9 +8671,9 @@
                 0,
                 0,
                 169,
-                null,
-                null,
-                null,
+                0,
+                0,
+                0,
                 57092000,
                 13379,
                 0,
@@ -8830,6 +8718,7 @@
                   173,
                   174,
                   175,
+                  501,
                   504,
                   505,
                   506,
@@ -8837,9 +8726,11 @@
                   508,
                   509,
                   510,
-                  511,
-                  512,
-                  513
+                  556,
+                  557,
+                  558,
+                  559,
+                  560
                 ]
               },
               "rows": {
@@ -8867,33 +8758,33 @@
                     0,
                     0,
                     0,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
                     171,
                     67479000,
                     13382,
                     3,
-                    null,
-                    null,
-                    null,
+                    0,
+                    0,
+                    0,
                     0,
                     11,
                     0
                   ],
                   [
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
                     2,
                     62,
                     0,
@@ -8902,9 +8793,9 @@
                     0,
                     0,
                     169,
-                    null,
-                    null,
-                    null,
+                    0,
+                    0,
+                    0,
                     57092000,
                     13379,
                     0,
@@ -8926,14 +8817,16 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Timestamp BMS [timestamp]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Event code [notavailable]\n  * `558` - Severity [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `501` - Battery phase  [bmsPhase]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Alarm (possibly an alarm group) [notavailable]\n  * `558` - Severity of the alarm (not available in BMU/Charger) [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n  * `560` - List with amount of capacity left in the battery. [notavailable]\n"
             },
             "example": [
               499,
+              501,
               556,
               557,
               558,
-              559
+              559,
+              560
             ]
           },
           "rows": {
@@ -8941,38 +8834,101 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `556` [notavailable] - INT32 [0 - 2] (divided by nan)\n  * `557` [notavailable] - INT32 [nan - nan] (divided by nan)\n  * `558` [notavailable] - INT32 [0 - 32768] (divided by nan)\n  * `559` [notavailable] - INT32 [0 - 255] (divided by nan)\n",
-                "type": "integer"
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `501` [bmsPhase] - INT32[] [0 - 3]\n  * `556` [notavailable] - INT32[] [0 - 2]\n  * `557` [notavailable] - INT32[] [0 - ∞]\n  * `558` [notavailable] - INT32[] [0 - 32768]\n  * `559` [notavailable] - INT32[] [0 - 255]\n  * `560` [notavailable] - INT32[] [0 - 100]\n",
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
               }
             },
             "example": [
               [
-                1206921600,
-                0,
-                2,
-                8192,
-                3
+                "2022-04-28T11:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  2
+                ],
+                [
+                  0
+                ],
+                [
+                  8192
+                ],
+                [
+                  3
+                ],
+                [
+                  80
+                ]
               ],
               [
-                1206921650,
-                0,
-                4,
-                16384,
-                4
+                "2022-04-28T17:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  4
+                ],
+                [
+                  0
+                ],
+                [
+                  16384
+                ],
+                [
+                  4
+                ],
+                [
+                  70
+                ]
               ],
               [
-                1206921800,
-                0,
-                4,
-                32768,
-                5
+                "2022-04-29T11:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  4
+                ],
+                [
+                  0
+                ],
+                [
+                  32768
+                ],
+                [
+                  5
+                ],
+                [
+                  60
+                ]
               ],
               [
-                1206923600,
-                0,
-                5,
-                32768,
-                5
+                "2022-04-29T22:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  5
+                ],
+                [
+                  0
+                ],
+                [
+                  32768
+                ],
+                [
+                  5
+                ],
+                [
+                  40
+                ]
               ]
             ]
           }
@@ -8994,14 +8950,16 @@
                 "items": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Timestamp BMS [timestamp]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Event code [notavailable]\n  * `558` - Severity [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n"
+                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `501` - Battery phase  [bmsPhase]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Alarm (possibly an alarm group) [notavailable]\n  * `558` - Severity of the alarm (not available in BMU/Charger) [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n  * `560` - List with amount of capacity left in the battery. [notavailable]\n"
                 },
                 "example": [
                   499,
+                  501,
                   556,
                   557,
                   558,
-                  559
+                  559,
+                  560
                 ]
               },
               "rows": {
@@ -9009,38 +8967,101 @@
                 "items": {
                   "type": "array",
                   "items": {
-                    "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `556` [notavailable] - INT32 [0 - 2] (divided by nan)\n  * `557` [notavailable] - INT32 [nan - nan] (divided by nan)\n  * `558` [notavailable] - INT32 [0 - 32768] (divided by nan)\n  * `559` [notavailable] - INT32 [0 - 255] (divided by nan)\n",
-                    "type": "integer"
+                    "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `501` [bmsPhase] - INT32[] [0 - 3]\n  * `556` [notavailable] - INT32[] [0 - 2]\n  * `557` [notavailable] - INT32[] [0 - ∞]\n  * `558` [notavailable] - INT32[] [0 - 32768]\n  * `559` [notavailable] - INT32[] [0 - 255]\n  * `560` [notavailable] - INT32[] [0 - 100]\n",
+                    "oneOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   }
                 },
                 "example": [
                   [
-                    1206921600,
-                    0,
-                    2,
-                    8192,
-                    3
+                    "2022-04-28T11:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      2
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      8192
+                    ],
+                    [
+                      3
+                    ],
+                    [
+                      80
+                    ]
                   ],
                   [
-                    1206921650,
-                    0,
-                    4,
-                    16384,
-                    4
+                    "2022-04-28T17:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      16384
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      70
+                    ]
                   ],
                   [
-                    1206921800,
-                    0,
-                    4,
-                    32768,
-                    5
+                    "2022-04-29T11:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      32768
+                    ],
+                    [
+                      5
+                    ],
+                    [
+                      60
+                    ]
                   ],
                   [
-                    1206923600,
-                    0,
-                    5,
-                    32768,
-                    5
+                    "2022-04-29T22:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      5
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      32768
+                    ],
+                    [
+                      5
+                    ],
+                    [
+                      40
+                    ]
                   ]
                 ]
               }
@@ -9056,14 +9077,16 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Timestamp BMS [timestamp]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Event code [notavailable]\n  * `558` - Severity [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `501` - Battery phase  [bmsPhase]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Alarm (possibly an alarm group) [notavailable]\n  * `558` - Severity of the alarm (not available in BMU/Charger) [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n  * `560` - List with amount of capacity left in the battery. [notavailable]\n"
             },
             "example": [
               499,
+              501,
               556,
               557,
               558,
-              559
+              559,
+              560
             ]
           },
           "rows": {
@@ -9071,24 +9094,59 @@
             "items": {
               "type": "array",
               "items": {
-                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `556` [notavailable] - INT32 [0 - 2] (divided by nan)\n  * `557` [notavailable] - INT32 [nan - nan] (divided by nan)\n  * `558` [notavailable] - INT32 [0 - 32768] (divided by nan)\n  * `559` [notavailable] - INT32 [0 - 255] (divided by nan)\n",
-                "type": "integer"
+                "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `501` [bmsPhase] - INT32[] [0 - 3]\n  * `556` [notavailable] - INT32[] [0 - 2]\n  * `557` [notavailable] - INT32[] [0 - ∞]\n  * `558` [notavailable] - INT32[] [0 - 32768]\n  * `559` [notavailable] - INT32[] [0 - 255]\n  * `560` [notavailable] - INT32[] [0 - 100]\n",
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
               }
             },
             "example": [
               [
-                1206921600,
-                0,
-                20,
-                16384,
-                10
+                "2022-04-28T11:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  4
+                ],
+                [
+                  0
+                ],
+                [
+                  16384
+                ],
+                [
+                  4
+                ],
+                [
+                  70
+                ]
               ],
               [
-                1206921650,
-                0,
-                20,
-                32768,
-                10
+                "2022-04-28T13:36:25.376+0100",
+                [
+                  0
+                ],
+                [
+                  4
+                ],
+                [
+                  0
+                ],
+                [
+                  32768
+                ],
+                [
+                  5
+                ],
+                [
+                  60
+                ]
               ]
             ]
           }
@@ -9110,14 +9168,16 @@
                 "items": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Timestamp BMS [timestamp]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Event code [notavailable]\n  * `558` - Severity [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n"
+                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `501` - Battery phase  [bmsPhase]\n  * `556` - Event code prefix [notavailable]\n  * `557` - Alarm (possibly an alarm group) [notavailable]\n  * `558` - Severity of the alarm (not available in BMU/Charger) [notavailable]\n  * `559` - Subcode of Event code ID557 [notavailable]\n  * `560` - List with amount of capacity left in the battery. [notavailable]\n"
                 },
                 "example": [
                   499,
+                  501,
                   556,
                   557,
                   558,
-                  559
+                  559,
+                  560
                 ]
               },
               "rows": {
@@ -9125,24 +9185,59 @@
                 "items": {
                   "type": "array",
                   "items": {
-                    "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `556` [notavailable] - INT32 [0 - 2] (divided by nan)\n  * `557` [notavailable] - INT32 [nan - nan] (divided by nan)\n  * `558` [notavailable] - INT32 [0 - 32768] (divided by nan)\n  * `559` [notavailable] - INT32 [0 - 255] (divided by nan)\n",
-                    "type": "integer"
+                    "description": "The following are the data types, allowed ranges, and units for each ID mentioned in 'fields':\n  * `499` [timestamp] - DATETIME [∞ - ∞]\n  * `501` [bmsPhase] - INT32[] [0 - 3]\n  * `556` [notavailable] - INT32[] [0 - 2]\n  * `557` [notavailable] - INT32[] [0 - ∞]\n  * `558` [notavailable] - INT32[] [0 - 32768]\n  * `559` [notavailable] - INT32[] [0 - 255]\n  * `560` [notavailable] - INT32[] [0 - 100]\n",
+                    "oneOf": [
+                      {
+                        "type": "integer"
+                      },
+                      {
+                        "type": "string"
+                      }
+                    ]
                   }
                 },
                 "example": [
                   [
-                    1206921600,
-                    0,
-                    20,
-                    16384,
-                    10
+                    "2022-04-28T11:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      16384
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      70
+                    ]
                   ],
                   [
-                    1206921650,
-                    0,
-                    20,
-                    32768,
-                    10
+                    "2022-04-28T13:36:25.376+0100",
+                    [
+                      0
+                    ],
+                    [
+                      4
+                    ],
+                    [
+                      0
+                    ],
+                    [
+                      32768
+                    ],
+                    [
+                      5
+                    ],
+                    [
+                      60
+                    ]
                   ]
                 ]
               }
@@ -9158,57 +9253,67 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total number of Ah discharged since reset of statistics. [totalDischargeAh])"
+            "description": "Total number of Ah discharged since reset of statistics. [totalDischargeAh])",
+            "example": 13
           },
           "62": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total number of Wh discharged since reset of statistics. [totalDischargeWh])"
+            "description": "Total number of Wh discharged since reset of statistics. [totalDischargeWh])",
+            "example": 303
           },
           "64": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total number of Ah charged since reset of statistics. [totalChargeAh])"
+            "description": "Total number of Ah charged since reset of statistics. [totalChargeAh])",
+            "example": 0
           },
           "65": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total number of Wh charged since reset of statistics. [totalChargeWh])"
+            "description": "Total number of Wh charged since reset of statistics. [totalChargeWh])",
+            "example": 0
           },
           "221": {
             "type": "integer",
             "format": "int32",
-            "description": "Total cycle count (cycles2To25+cycles26To50+cycles51To80+cycles81To90+cyclesAbove90) [totalCycleCount]"
+            "description": "Total cycle count (cycles2To25+cycles26To50+cycles51To80+cycles81To90+cyclesAbove90) [totalCycleCount]",
+            "example": 171
           },
           "499": {
-            "description": "Real time when log was written [timestamp]"
+            "type": "string",
+            "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+            "example": "2022-04-28T11:36:25.376+0100"
           },
           "514": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total regenerated ampere-hours [totalRegenAh])"
+            "description": "Total regenerated ampere-hours [totalRegenAh])",
+            "example": 0
           },
           "515": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Total regenerated watt-hours [totalRegenWh])"
+            "description": "Total regenerated watt-hours [totalRegenWh])",
+            "example": 0
           },
           "516": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Amount of deep discharge cycles [totalDeepDischarge]"
+            "description": "Amount of deep discharge cycles [totalDeepDischarge]",
+            "example": 0
           },
           "526": {
             "type": "integer",
@@ -9217,7 +9322,8 @@
             "exclusiveMinimum": true,
             "maximum": 100,
             "exclusiveMaximum": true,
-            "description": "State of health value in percents.  [stateOfHealth] (divided by )"
+            "description": "State of health value in percents.  [stateOfHealth]",
+            "example": 0
           }
         },
         "required": [
@@ -9249,57 +9355,67 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Ah discharged since reset of statistics. [totalDischargeAh])"
+                "description": "Total number of Ah discharged since reset of statistics. [totalDischargeAh])",
+                "example": 13
               },
               "62": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Wh discharged since reset of statistics. [totalDischargeWh])"
+                "description": "Total number of Wh discharged since reset of statistics. [totalDischargeWh])",
+                "example": 303
               },
               "64": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Ah charged since reset of statistics. [totalChargeAh])"
+                "description": "Total number of Ah charged since reset of statistics. [totalChargeAh])",
+                "example": 0
               },
               "65": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total number of Wh charged since reset of statistics. [totalChargeWh])"
+                "description": "Total number of Wh charged since reset of statistics. [totalChargeWh])",
+                "example": 0
               },
               "221": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Total cycle count (cycles2To25+cycles26To50+cycles51To80+cycles81To90+cyclesAbove90) [totalCycleCount]"
+                "description": "Total cycle count (cycles2To25+cycles26To50+cycles51To80+cycles81To90+cyclesAbove90) [totalCycleCount]",
+                "example": 171
               },
               "499": {
-                "description": "Real time when log was written [timestamp]"
+                "type": "string",
+                "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+                "example": "2022-04-28T11:36:25.376+0100"
               },
               "514": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total regenerated ampere-hours [totalRegenAh])"
+                "description": "Total regenerated ampere-hours [totalRegenAh])",
+                "example": 0
               },
               "515": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Total regenerated watt-hours [totalRegenWh])"
+                "description": "Total regenerated watt-hours [totalRegenWh])",
+                "example": 0
               },
               "516": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Amount of deep discharge cycles [totalDeepDischarge]"
+                "description": "Amount of deep discharge cycles [totalDeepDischarge]",
+                "example": 0
               },
               "526": {
                 "type": "integer",
@@ -9308,7 +9424,8 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "State of health value in percents.  [stateOfHealth] (divided by )"
+                "description": "State of health value in percents.  [stateOfHealth]",
+                "example": 0
               }
             },
             "required": [
@@ -9333,40 +9450,48 @@
             "type": "number",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Capacity in Ah of the battery [capacity])"
-          },
-          "10": {
-            "type": "integer",
-            "format": "int32",
-            "description": "Unique device serial number [serialNumber]"
+            "description": "Capacity in Ah of the battery [capacity]",
+            "example": 210
           },
           "38": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
+            "description": "The firmware type number, what kind of firmware is on the device [firmwareType]",
+            "example": 1001053
           },
           "39": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
+            "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]",
+            "example": 0
+          },
+          "389": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0,
+            "exclusiveMinimum": true,
+            "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]",
+            "example": 0
           },
           "450": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Amount of serial cells connected to BMS [sCells]"
+            "description": "Amount of serial cells connected to BMS [sCells]",
+            "example": 6
           },
           "451": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Amount of parallel cells connected to BMS [pCells]"
+            "description": "Amount of parallel cells connected to BMS [pCells]",
+            "example": 1
           },
           "452": {
             "type": "integer",
@@ -9375,7 +9500,8 @@
             "exclusiveMinimum": true,
             "maximum": 7,
             "exclusiveMaximum": true,
-            "description": "Battery type [machineType]"
+            "description": "Battery type [machineType]",
+            "example": 1
           },
           "453": {
             "type": "integer",
@@ -9384,56 +9510,64 @@
             "exclusiveMinimum": true,
             "maximum": 7,
             "exclusiveMaximum": true,
-            "description": "Charger CAN configuration [chargerType]"
+            "description": "Charger CAN configuration [chargerType]",
+            "example": 1
           },
           "454": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Bitcoded settings and configuration of BMS.  [auxFull]"
+            "description": "Bitcoded settings and configuration of BMS.  [auxFull]",
+            "example": 8192
           },
           "455": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Max allowed charge C-rate [chargeCRate]"
+            "description": "Max allowed charge C-rate [chargeCRate]",
+            "example": 8
           },
           "456": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "High current threshold [hcTrigger])"
+            "description": "High current threshold [hcTrigger]",
+            "example": 15
           },
           "457": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "High current release  [hcRelease])"
+            "description": "High current release  [hcRelease]",
+            "example": 5
           },
           "458": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Charger CAN node ID for detection [chargerDetectId]"
+            "description": "Charger CAN node ID for detection [chargerDetectId]",
+            "example": 1836
           },
           "459": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Charger detected through CAN (AGV applications) [chargerDetectBit]"
+            "description": "Charger detected through CAN (AGV applications) [chargerDetectBit]",
+            "example": 0
           },
           "460": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Timer to battery shut of. PWRD_SOC must be true. [pwrdTmo]"
+            "description": "Timer to battery shut of. PWRD_SOC must be true. [pwrdTmo]",
+            "example": 120
           },
           "461": {
             "type": "integer",
@@ -9442,175 +9576,202 @@
             "exclusiveMinimum": true,
             "maximum": 100,
             "exclusiveMaximum": true,
-            "description": "Threshold SOC for battery shut of (PWRD:TMO must be true) [pwrdSoc])"
+            "description": "Threshold SOC for battery shut of (PWRD:TMO must be true) [pwrdSoc]",
+            "example": 20
           },
           "462": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "CAN kbps of master processor [canBaudRateMaster])"
+            "description": "CAN kbps of master processor [canBaudRateMaster]",
+            "example": 0
           },
           "463": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "CAN kbps of slave processor [canBaudRateSlave])"
+            "description": "CAN kbps of slave processor [canBaudRateSlave]",
+            "example": 0
           },
           "464": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Max hardware discharge regen current [maxHwDcReCurrent])"
+            "description": "Max hardware discharge regen current [maxHwDcReCurrent]",
+            "example": 325
           },
           "465": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "SP charge C-rate (x10) [spChargeC]"
+            "description": "SP charge C-rate (x10) [spChargeC]",
+            "example": 10
           },
           "466": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "SP charge time in seconds [spChargeTmo])"
+            "description": "SP charge time in seconds [spChargeTmo]",
+            "example": 300
           },
           "467": {
             "type": "integer",
             "format": "int32",
-            "description": "Strategy for charging the battery [chargerStrategy]"
+            "description": "Strategy for charging the battery [chargerStrategy]",
+            "example": 0
           },
           "468": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Discharge regenerative C-rate [dcReCRate]"
+            "description": "Discharge regenerative C-rate [dcReCRate]",
+            "example": 20
           },
           "469": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Maximum charge current limited by hardware [maxHwChCurrent])"
+            "description": "Maximum charge current limited by hardware [maxHwChCurrent]",
+            "example": 325
           },
           "470": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Maximum aux discharge regenerative current  [maxAuxDcReCurrent])"
+            "description": "Maximum aux discharge regenerative current  [maxAuxDcReCurrent]",
+            "example": 325
           },
           "471": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Maximum aux charge current  [maxAuxChCurrent])"
+            "description": "Maximum aux charge current  [maxAuxChCurrent]",
+            "example": 325
           },
           "472": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Node ID of CANopen bus [canOpenNodeId]"
+            "description": "Node ID of CANopen bus [canOpenNodeId]",
+            "example": 30
           },
           "473": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Amount of CAN sensors [nrOfCanSensors]"
+            "description": "Amount of CAN sensors [nrOfCanSensors]",
+            "example": 1
           },
           "474": {
             "type": "integer",
             "format": "int32",
-            "description": "IO expansion type [ioExpansionType]"
+            "description": "IO expansion type [ioExpansionType]",
+            "example": 0
           },
           "475": {
             "type": "integer",
             "format": "int32",
-            "description": "Type of heater used in battery [heaterType]"
+            "description": "Type of heater used in battery [heaterType]",
+            "example": 2
           },
           "476": {
             "type": "integer",
             "format": "int32",
-            "description": "Type of cells used in battery [cellType]"
+            "description": "Type of cells used in battery [cellType]",
+            "example": 0
           },
           "477": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Heater SOC and number of heaters [heaterSocNrOfHeaters]"
+            "description": "Heater SOC and number of heaters [heaterSocNrOfHeaters]",
+            "example": 7680
           },
           "478": {
             "type": "integer",
             "format": "int32",
-            "description": "Pin 12V select [pin12VSelect]"
+            "description": "Pin 12V select [pin12VSelect]",
+            "example": 4
           },
           "479": {
             "type": "integer",
             "format": "int32",
-            "description": "Configuration of contactor [contactorCfg]"
+            "description": "Configuration of contactor [contactorCfg]",
+            "example": 0
           },
           "480": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Heater threshold max ; min value [heaterThresholdMaxMin])"
+            "description": "Heater threshold max ; min value [heaterThresholdMaxMin]",
+            "example": 5135
           },
           "481": {
             "type": "integer",
             "format": "int32",
-            "description": "Multiple BMS configuration [multiBmsCfg]"
+            "description": "Multiple BMS configuration [multiBmsCfg]",
+            "example": 0
           },
           "482": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Charge perfered Tmax offset [chPrefTMaxOffset])"
+            "description": "Charge perfered Tmax offset [chPrefTMaxOffset]",
+            "example": 0
           },
           "483": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Charge cell voltage target [chVCellTarget])"
+            "description": "Charge cell voltage target [chVCellTarget]",
+            "example": 4200
           },
           "484": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Discharge cell voltage target [dcVCellTarget])"
+            "description": "Discharge cell voltage target [dcVCellTarget]",
+            "example": 0
           },
           "485": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Set temperature for heater [heaterSetTemp])"
+            "description": "Set temperature for heater [heaterSetTemp]",
+            "example": 18
           },
           "486": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Set gap time [spGapTime])"
+            "description": "Set gap time [spGapTime]",
+            "example": 900
           },
           "487": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "BMS part number  [partNr]"
+            "description": "BMS part number  [partNr]",
+            "example": 0
           },
           "488": {
             "type": "integer",
@@ -9624,36 +9785,42 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "OEM part number base [oemHwPnBase]"
+            "description": "OEM part number base [oemHwPnBase]",
+            "example": 0
           },
           "490": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "OEM part number revision [oemHwPnRev]"
+            "description": "OEM part number revision [oemHwPnRev]",
+            "example": 0
           },
           "491": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Gain calibrate current 1 [curr1Calib])"
+            "description": "Gain calibrate current 1 [curr1Calib]",
+            "example": 1000
           },
           "492": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Limit check [limitCheck]"
+            "description": "Limit check [limitCheck]",
+            "example": 0
           },
           "499": {
-            "description": "Real time when log was written [timestamp]"
+            "type": "string",
+            "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+            "example": "2022-04-28T11:36:25.376+0100"
           }
         },
         "required": [
-          "10",
           "38",
+          "389",
           "39",
           "450",
           "451",
@@ -9717,40 +9884,48 @@
                 "type": "number",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Capacity in Ah of the battery [capacity])"
-              },
-              "10": {
-                "type": "integer",
-                "format": "int32",
-                "description": "Unique device serial number [serialNumber]"
+                "description": "Capacity in Ah of the battery [capacity]",
+                "example": 210
               },
               "38": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware type number, what kind of firmware is on the device [firmwareType]"
+                "description": "The firmware type number, what kind of firmware is on the device [firmwareType]",
+                "example": 1001053
               },
               "39": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]"
+                "description": "The firmware version number, which version of the firmware type is on the device [firmwareVersion]",
+                "example": 0
+              },
+              "389": {
+                "type": "integer",
+                "format": "int64",
+                "minimum": 0,
+                "exclusiveMinimum": true,
+                "description": "Serial number of the device, 8 bytes. MP serial numbers are 5 bytes. [notavailable]",
+                "example": 0
               },
               "450": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Amount of serial cells connected to BMS [sCells]"
+                "description": "Amount of serial cells connected to BMS [sCells]",
+                "example": 6
               },
               "451": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Amount of parallel cells connected to BMS [pCells]"
+                "description": "Amount of parallel cells connected to BMS [pCells]",
+                "example": 1
               },
               "452": {
                 "type": "integer",
@@ -9759,7 +9934,8 @@
                 "exclusiveMinimum": true,
                 "maximum": 7,
                 "exclusiveMaximum": true,
-                "description": "Battery type [machineType]"
+                "description": "Battery type [machineType]",
+                "example": 1
               },
               "453": {
                 "type": "integer",
@@ -9768,56 +9944,64 @@
                 "exclusiveMinimum": true,
                 "maximum": 7,
                 "exclusiveMaximum": true,
-                "description": "Charger CAN configuration [chargerType]"
+                "description": "Charger CAN configuration [chargerType]",
+                "example": 1
               },
               "454": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Bitcoded settings and configuration of BMS.  [auxFull]"
+                "description": "Bitcoded settings and configuration of BMS.  [auxFull]",
+                "example": 8192
               },
               "455": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Max allowed charge C-rate [chargeCRate]"
+                "description": "Max allowed charge C-rate [chargeCRate]",
+                "example": 8
               },
               "456": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "High current threshold [hcTrigger])"
+                "description": "High current threshold [hcTrigger]",
+                "example": 15
               },
               "457": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "High current release  [hcRelease])"
+                "description": "High current release  [hcRelease]",
+                "example": 5
               },
               "458": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Charger CAN node ID for detection [chargerDetectId]"
+                "description": "Charger CAN node ID for detection [chargerDetectId]",
+                "example": 1836
               },
               "459": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Charger detected through CAN (AGV applications) [chargerDetectBit]"
+                "description": "Charger detected through CAN (AGV applications) [chargerDetectBit]",
+                "example": 0
               },
               "460": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Timer to battery shut of. PWRD_SOC must be true. [pwrdTmo]"
+                "description": "Timer to battery shut of. PWRD_SOC must be true. [pwrdTmo]",
+                "example": 120
               },
               "461": {
                 "type": "integer",
@@ -9826,175 +10010,202 @@
                 "exclusiveMinimum": true,
                 "maximum": 100,
                 "exclusiveMaximum": true,
-                "description": "Threshold SOC for battery shut of (PWRD:TMO must be true) [pwrdSoc])"
+                "description": "Threshold SOC for battery shut of (PWRD:TMO must be true) [pwrdSoc]",
+                "example": 20
               },
               "462": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "CAN kbps of master processor [canBaudRateMaster])"
+                "description": "CAN kbps of master processor [canBaudRateMaster]",
+                "example": 0
               },
               "463": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "CAN kbps of slave processor [canBaudRateSlave])"
+                "description": "CAN kbps of slave processor [canBaudRateSlave]",
+                "example": 0
               },
               "464": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Max hardware discharge regen current [maxHwDcReCurrent])"
+                "description": "Max hardware discharge regen current [maxHwDcReCurrent]",
+                "example": 325
               },
               "465": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "SP charge C-rate (x10) [spChargeC]"
+                "description": "SP charge C-rate (x10) [spChargeC]",
+                "example": 10
               },
               "466": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "SP charge time in seconds [spChargeTmo])"
+                "description": "SP charge time in seconds [spChargeTmo]",
+                "example": 300
               },
               "467": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Strategy for charging the battery [chargerStrategy]"
+                "description": "Strategy for charging the battery [chargerStrategy]",
+                "example": 0
               },
               "468": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Discharge regenerative C-rate [dcReCRate]"
+                "description": "Discharge regenerative C-rate [dcReCRate]",
+                "example": 20
               },
               "469": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Maximum charge current limited by hardware [maxHwChCurrent])"
+                "description": "Maximum charge current limited by hardware [maxHwChCurrent]",
+                "example": 325
               },
               "470": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Maximum aux discharge regenerative current  [maxAuxDcReCurrent])"
+                "description": "Maximum aux discharge regenerative current  [maxAuxDcReCurrent]",
+                "example": 325
               },
               "471": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Maximum aux charge current  [maxAuxChCurrent])"
+                "description": "Maximum aux charge current  [maxAuxChCurrent]",
+                "example": 325
               },
               "472": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Node ID of CANopen bus [canOpenNodeId]"
+                "description": "Node ID of CANopen bus [canOpenNodeId]",
+                "example": 30
               },
               "473": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Amount of CAN sensors [nrOfCanSensors]"
+                "description": "Amount of CAN sensors [nrOfCanSensors]",
+                "example": 1
               },
               "474": {
                 "type": "integer",
                 "format": "int32",
-                "description": "IO expansion type [ioExpansionType]"
+                "description": "IO expansion type [ioExpansionType]",
+                "example": 0
               },
               "475": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Type of heater used in battery [heaterType]"
+                "description": "Type of heater used in battery [heaterType]",
+                "example": 2
               },
               "476": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Type of cells used in battery [cellType]"
+                "description": "Type of cells used in battery [cellType]",
+                "example": 0
               },
               "477": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Heater SOC and number of heaters [heaterSocNrOfHeaters]"
+                "description": "Heater SOC and number of heaters [heaterSocNrOfHeaters]",
+                "example": 7680
               },
               "478": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Pin 12V select [pin12VSelect]"
+                "description": "Pin 12V select [pin12VSelect]",
+                "example": 4
               },
               "479": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Configuration of contactor [contactorCfg]"
+                "description": "Configuration of contactor [contactorCfg]",
+                "example": 0
               },
               "480": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Heater threshold max ; min value [heaterThresholdMaxMin])"
+                "description": "Heater threshold max ; min value [heaterThresholdMaxMin]",
+                "example": 5135
               },
               "481": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Multiple BMS configuration [multiBmsCfg]"
+                "description": "Multiple BMS configuration [multiBmsCfg]",
+                "example": 0
               },
               "482": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Charge perfered Tmax offset [chPrefTMaxOffset])"
+                "description": "Charge perfered Tmax offset [chPrefTMaxOffset]",
+                "example": 0
               },
               "483": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Charge cell voltage target [chVCellTarget])"
+                "description": "Charge cell voltage target [chVCellTarget]",
+                "example": 4200
               },
               "484": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Discharge cell voltage target [dcVCellTarget])"
+                "description": "Discharge cell voltage target [dcVCellTarget]",
+                "example": 0
               },
               "485": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Set temperature for heater [heaterSetTemp])"
+                "description": "Set temperature for heater [heaterSetTemp]",
+                "example": 18
               },
               "486": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Set gap time [spGapTime])"
+                "description": "Set gap time [spGapTime]",
+                "example": 900
               },
               "487": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "BMS part number  [partNr]"
+                "description": "BMS part number  [partNr]",
+                "example": 0
               },
               "488": {
                 "type": "integer",
@@ -10008,36 +10219,42 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "OEM part number base [oemHwPnBase]"
+                "description": "OEM part number base [oemHwPnBase]",
+                "example": 0
               },
               "490": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "OEM part number revision [oemHwPnRev]"
+                "description": "OEM part number revision [oemHwPnRev]",
+                "example": 0
               },
               "491": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Gain calibrate current 1 [curr1Calib])"
+                "description": "Gain calibrate current 1 [curr1Calib]",
+                "example": 1000
               },
               "492": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Limit check [limitCheck]"
+                "description": "Limit check [limitCheck]",
+                "example": 0
               },
               "499": {
-                "description": "Real time when log was written [timestamp]"
+                "type": "string",
+                "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+                "example": "2022-04-28T11:36:25.376+0100"
               }
             },
             "required": [
-              "10",
               "38",
+              "389",
               "39",
               "450",
               "451",
@@ -10096,36 +10313,43 @@
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Master BMS base software [mplMasterHexBase]"
+            "description": "Master BMS base software [mplMasterHexBase]",
+            "example": 1001051
           },
           "494": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Master BMS software revision [mplMasterHexRev]"
+            "description": "Master BMS software revision [mplMasterHexRev]",
+            "example": 0
           },
           "495": {
             "type": "integer",
             "format": "int32",
-            "description": "Slave BMS base software [mplSlaveHexBase]"
+            "description": "Slave BMS base software [mplSlaveHexBase]",
+            "example": 1001052
           },
           "496": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Slave BMS software revision [mplSlaveHexRev]"
+            "description": "Slave BMS software revision [mplSlaveHexRev]",
+            "example": 0
           },
           "497": {
             "type": "integer",
             "format": "int32",
             "minimum": 0,
             "exclusiveMinimum": true,
-            "description": "Brix Hex [mplBrixHex]"
+            "description": "Brix Hex [mplBrixHex]",
+            "example": 1001053
           },
           "499": {
-            "description": "Real time when log was written [timestamp]"
+            "type": "string",
+            "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+            "example": "2022-04-28T11:36:25.376+0100"
           }
         },
         "required": [
@@ -10153,36 +10377,43 @@
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Master BMS base software [mplMasterHexBase]"
+                "description": "Master BMS base software [mplMasterHexBase]",
+                "example": 1001051
               },
               "494": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Master BMS software revision [mplMasterHexRev]"
+                "description": "Master BMS software revision [mplMasterHexRev]",
+                "example": 0
               },
               "495": {
                 "type": "integer",
                 "format": "int32",
-                "description": "Slave BMS base software [mplSlaveHexBase]"
+                "description": "Slave BMS base software [mplSlaveHexBase]",
+                "example": 1001052
               },
               "496": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Slave BMS software revision [mplSlaveHexRev]"
+                "description": "Slave BMS software revision [mplSlaveHexRev]",
+                "example": 0
               },
               "497": {
                 "type": "integer",
                 "format": "int32",
                 "minimum": 0,
                 "exclusiveMinimum": true,
-                "description": "Brix Hex [mplBrixHex]"
+                "description": "Brix Hex [mplBrixHex]",
+                "example": 1001053
               },
               "499": {
-                "description": "Real time when log was written [timestamp]"
+                "type": "string",
+                "description": "Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]",
+                "example": "2022-04-28T11:36:25.376+0100"
               }
             },
             "required": [
@@ -10204,7 +10435,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n"
             },
             "example": [
               499,
@@ -10235,7 +10466,7 @@
             "example": [
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   0,
                   0,
@@ -10264,7 +10495,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   0,
                   0,
@@ -10293,7 +10524,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   0,
                   0,
@@ -10322,7 +10553,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   0,
                   0,
@@ -10351,7 +10582,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   4626,
                   0,
@@ -10390,7 +10621,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 [
                   0,
                   0,
@@ -10437,7 +10668,7 @@
                 "items": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n"
+                  "description": "The list of allowed Device Data Specification IDs are:\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `520` - Histogram of different variables measured in the BMS [bmsHistogram]\n  * `521` - Type interpretation of histograms from BMS [bmsHistogramType]\n"
                 },
                 "example": [
                   499,
@@ -10468,7 +10699,7 @@
                 "example": [
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       0,
                       0,
@@ -10497,7 +10728,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       0,
                       0,
@@ -10526,7 +10757,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       0,
                       0,
@@ -10555,7 +10786,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       0,
                       0,
@@ -10584,7 +10815,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       4626,
                       0,
@@ -10623,7 +10854,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     [
                       0,
                       0,
@@ -10664,7 +10895,7 @@
             "items": {
               "type": "integer",
               "format": "int32",
-              "description": "The list of allowed Device Data Specification IDs are:\n  * `39` - The firmware version number, which version of the firmware type is on the device [firmwareVersion]\n  * `499` - Real time when log was written [timestamp]\n  * `517` - BMS configurated index of modules [brixmapIndex]\n  * `518` - Configured serial number of module [configuredSn]\n  * `519` - Part number of BMS [hwPartNumber]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
+              "description": "The list of allowed Device Data Specification IDs are:\n  * `39` - The firmware version number, which version of the firmware type is on the device [firmwareVersion]\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `517` - BMS configurated index of modules [brixmapIndex]\n  * `518` - Configured serial number of module [configuredSn]\n  * `519` - Part number of BMS [hwPartNumber]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
             },
             "example": [
               39,
@@ -10686,7 +10917,7 @@
             "example": [
               [
                 6,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 0,
                 10,
                 1337,
@@ -10694,7 +10925,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 1,
                 20,
                 1337,
@@ -10702,7 +10933,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 2,
                 30,
                 1337,
@@ -10710,7 +10941,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 3,
                 40,
                 1337,
@@ -10718,7 +10949,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 4,
                 50,
                 8570073,
@@ -10726,7 +10957,7 @@
               ],
               [
                 0,
-                1206921600,
+                "2022-04-28T11:36:25.376+0100",
                 5,
                 60,
                 1337,
@@ -10752,7 +10983,7 @@
                 "items": {
                   "type": "integer",
                   "format": "int32",
-                  "description": "The list of allowed Device Data Specification IDs are:\n  * `39` - The firmware version number, which version of the firmware type is on the device [firmwareVersion]\n  * `499` - Real time when log was written [timestamp]\n  * `517` - BMS configurated index of modules [brixmapIndex]\n  * `518` - Configured serial number of module [configuredSn]\n  * `519` - Part number of BMS [hwPartNumber]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
+                  "description": "The list of allowed Device Data Specification IDs are:\n  * `39` - The firmware version number, which version of the firmware type is on the device [firmwareVersion]\n  * `499` - Real time when log was written in YYYY-MM-DDThh:mm:ss.mmm±hhmm format. Popnet source is in POSIX format, seconds since 1 Januari 1984 with local time offset [timestamp]\n  * `517` - BMS configurated index of modules [brixmapIndex]\n  * `518` - Configured serial number of module [configuredSn]\n  * `519` - Part number of BMS [hwPartNumber]\n  * `6` - Capacity in Ah of the battery [capacity]\n"
                 },
                 "example": [
                   39,
@@ -10774,7 +11005,7 @@
                 "example": [
                   [
                     6,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     0,
                     10,
                     1337,
@@ -10782,7 +11013,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     1,
                     20,
                     1337,
@@ -10790,7 +11021,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     2,
                     30,
                     1337,
@@ -10798,7 +11029,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     3,
                     40,
                     1337,
@@ -10806,7 +11037,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     4,
                     50,
                     8570073,
@@ -10814,7 +11045,7 @@
                   ],
                   [
                     0,
-                    1206921600,
+                    "2022-04-28T11:36:25.376+0100",
                     5,
                     60,
                     1337,
