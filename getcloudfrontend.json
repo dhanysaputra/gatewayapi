@@ -4379,7 +4379,7 @@
         }
       }
     },
-    "/{type}/{id}/rename": {
+    "/{type}/{id}/edit": {
       "post": {
         "tags": [
           "fleet/fleetgroup"
@@ -4422,16 +4422,21 @@
                     "type": "string",
                     "description": "The new name of the fleet or fleetgroup",
                     "example": "Södra"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The new name of the fleet or fleetgroup",
+                    "example": "-"
                   }
                 }
               }
             }
           }
         },
-        "summary": "Rename existing fleet/fleetgroup",
+        "summary": "Edit existing fleet/fleetgroup",
         "responses": {
           "200": {
-            "description": "Successfully renaming the fleet/fleetgroup.",
+            "description": "Successfully editing the fleet/fleetgroup.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4944,73 +4949,6 @@
         }
       }
     },
-    "/customer/{id}/delete": {
-      "delete": {
-        "tags": [
-          "customer"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "Id of the subcustomer. Retrieved from the customer tree (See /customer)",
-            "example": "QXXPCo8C7xY7kpi7a",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Delete subcustomer",
-        "responses": {
-          "200": {
-            "description": "Successfully deleting the subcustomer",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseDeleteBMU"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/customer/addNew": {
       "post": {
         "tags": [
@@ -5225,6 +5163,73 @@
         "responses": {
           "200": {
             "description": "Successfully update the parent of a subcustomer.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDeleteBMU"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/customer/{id}/delete": {
+      "delete": {
+        "tags": [
+          "customer"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id of the subcustomer. Retrieved from the customer tree (See /customer)",
+            "example": "QXXPCo8C7xY7kpi7a",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Delete subcustomer",
+        "responses": {
+          "200": {
+            "description": "Successfully deleting the subcustomer",
             "content": {
               "application/json": {
                 "schema": {
