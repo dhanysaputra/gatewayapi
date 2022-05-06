@@ -768,7 +768,7 @@
       }
     },
     "/bmu/{mui}/delete": {
-      "post": {
+      "delete": {
         "tags": [
           "bmu"
         ],
@@ -1653,7 +1653,7 @@
       }
     },
     "/bms/{mui}/delete": {
-      "post": {
+      "delete": {
         "tags": [
           "bms"
         ],
@@ -2451,7 +2451,7 @@
       }
     },
     "/charger/{mui}/delete": {
-      "post": {
+      "delete": {
         "tags": [
           "charger"
         ],
@@ -2476,73 +2476,6 @@
         "responses": {
           "200": {
             "description": "Successfully deleting the charger from the database.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseDeleteBMU"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/gateway/{mui}/delete": {
-      "post": {
-        "tags": [
-          "gateway"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "mui",
-            "in": "path",
-            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
-            "example": "562959144425069",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Delete gateway",
-        "responses": {
-          "200": {
-            "description": "Successfully deleting the gateway from the database.",
             "content": {
               "application/json": {
                 "schema": {
@@ -2622,6 +2555,73 @@
         "responses": {
           "200": {
             "description": "Successfully changing gateway's fleet",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDeleteBMU"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/gateway/{mui}/delete": {
+      "delete": {
+        "tags": [
+          "gateway"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "mui",
+            "in": "path",
+            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
+            "example": "562959144425069",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "summary": "Delete gateway",
+        "responses": {
+          "200": {
+            "description": "Successfully deleting the gateway from the database.",
             "content": {
               "application/json": {
                 "schema": {
@@ -2752,7 +2752,7 @@
       }
     },
     "/{type}/{id}/delete/{tabName}": {
-      "post": {
+      "delete": {
         "tags": [
           "fleet/fleetgroup"
         ],
@@ -4801,7 +4801,7 @@
       }
     },
     "/{type}/{id}/delete": {
-      "post": {
+      "delete": {
         "tags": [
           "fleet/fleetgroup"
         ],
