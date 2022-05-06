@@ -4280,7 +4280,7 @@
         }
       }
     },
-    "/{type}/addNew": {
+    "/fleetgroup/addNew": {
       "post": {
         "tags": [
           "fleet/fleetgroup"
@@ -4288,18 +4288,6 @@
         "security": [
           {
             "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "type",
-            "in": "path",
-            "description": "fleet or fleetgroup",
-            "example": "fleet",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "requestBody": {
@@ -4311,22 +4299,22 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "description": "The name of the new fleet or fleetgroup",
+                    "description": "The name of the new fleetgroup",
                     "example": "South Park"
                   },
                   "description": {
                     "type": "string",
-                    "description": "The description of the new fleet or fleetgroup",
+                    "description": "The description of the new fleetgroup",
                     "example": ""
                   },
                   "isParentFleetgroup": {
                     "type": "boolean",
-                    "description": "True if the new fleet/fleetgroup will directly be under a Fleetgroup. False if it will directly be under a Customer.",
+                    "description": "True if the new fleetgroup will directly be under a Fleetgroup. False if it will directly be under a Customer.",
                     "example": true
                   },
                   "parentId": {
                     "type": "string",
-                    "description": "The fleetgroup ID (if isParentFleetgroup=True) or the customer ID (if isParentFleetgroup=False) of the new fleet/fleetgroup. The ID is retrieved from the customer Tree (see /customer endpoint).",
+                    "description": "The fleetgroup ID (if isParentFleetgroup=True) or the customer ID (if isParentFleetgroup=False) of the new fleetgroup. The ID is retrieved from the customer tree (see /customer endpoint).",
                     "example": "s4dEGeH6t6DzJQjJ6"
                   }
                 }
@@ -4334,10 +4322,10 @@
             }
           }
         },
-        "summary": "Register new fleet/fleetgroup",
+        "summary": "Register new fleetgroup",
         "responses": {
           "200": {
-            "description": "Successfully registering the new fleet/fleetgroup.",
+            "description": "Successfully registering the new fleetgroup.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4379,7 +4367,7 @@
         }
       }
     },
-    "/{type}/{id}/edit": {
+    "/fleetgroup/{id}/edit": {
       "post": {
         "tags": [
           "fleet/fleetgroup"
@@ -4391,19 +4379,9 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "description": "fleet or fleetgroup",
-            "example": "fleet",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "Fleet id or fleetgroup id that the user wants to rename.",
+            "description": "Fleetgroup id that the user wants to rename and change description.",
             "example": "123821738273",
             "required": true,
             "schema": {
@@ -4420,12 +4398,12 @@
                 "properties": {
                   "name": {
                     "type": "string",
-                    "description": "The new name of the fleet or fleetgroup",
+                    "description": "The new name of the fleetgroup",
                     "example": "Södra"
                   },
                   "description": {
                     "type": "string",
-                    "description": "The new name of the fleet or fleetgroup",
+                    "description": "The new description of the fleetgroup",
                     "example": "-"
                   }
                 }
@@ -4433,10 +4411,10 @@
             }
           }
         },
-        "summary": "Edit existing fleet/fleetgroup",
+        "summary": "Edit existing fleetgroup",
         "responses": {
           "200": {
-            "description": "Successfully editing the fleet/fleetgroup.",
+            "description": "Successfully editing the fleetgroup.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4478,7 +4456,109 @@
         }
       }
     },
-    "/{type}/{id}/changeParent": {
+    "/fleet/addNew": {
+      "post": {
+        "tags": [
+          "fleet/fleetgroup"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "description": "The name of the new fleet",
+                    "example": "South Park"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The description of the new fleet",
+                    "example": ""
+                  },
+                  "isParentFleetgroup": {
+                    "type": "boolean",
+                    "description": "True if the new fleet will directly be under a Fleetgroup. False if it will directly be under a Customer.",
+                    "example": true
+                  },
+                  "parentId": {
+                    "type": "string",
+                    "description": "The fleetgroup ID (if isParentFleetgroup=True) or the customer ID (if isParentFleetgroup=False) of the new fleet. The ID is retrieved from the customer Tree (see /customer endpoint).",
+                    "example": "s4dEGeH6t6DzJQjJ6"
+                  },
+                  "lattitude": {
+                    "type": "number",
+                    "description": "The new lattitude coordinate of the fleet.",
+                    "example": 20.583748237438
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "description": "The new longitude coordinate of the fleet.",
+                    "example": 20.583748237438
+                  },
+                  "timezone": {
+                    "type": "string",
+                    "description": "TZ database name. The timezone will be validated with the coordinates by frontend. API will not validate it.",
+                    "example": "+0100"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Register new fleet",
+        "responses": {
+          "200": {
+            "description": "Successfully registering the new fleet.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseDeleteBMU"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Unauthorized"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "ItemNotFound",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItemNotFound"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "InternalServerError",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InternalServerError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/fleet/{id}/edit": {
       "post": {
         "tags": [
           "fleet/fleetgroup"
@@ -4490,19 +4570,9 @@
         ],
         "parameters": [
           {
-            "name": "type",
-            "in": "path",
-            "description": "fleet or fleetgroup",
-            "example": "fleet",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "id",
             "in": "path",
-            "description": "Fleet id or fleetgroup id that the user wants to move parent.",
+            "description": "Fleet id that the user wants to rename or change coordinates/timezone.",
             "example": "123821738273",
             "required": true,
             "schema": {
@@ -4517,25 +4587,40 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "isParentFleetgroup": {
-                    "type": "boolean",
-                    "description": "True if the fleet/fleetgroup will directly be under a Fleetgroup. False if it will directly be under a Customer.",
-                    "example": true
-                  },
-                  "parentId": {
+                  "name": {
                     "type": "string",
-                    "description": "The fleetgroup ID (if isParentFleetgroup=True) or the customer ID (if isParentFleetgroup=False) of the new fleet/fleetgroup. The ID is retrieved from the customer Tree (see /customer endpoint).",
-                    "example": "s4dEGeH6t6DzJQjJ6"
+                    "description": "The new name of the fleet",
+                    "example": "Södra"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "The new name of the fleet",
+                    "example": "-"
+                  },
+                  "lattitude": {
+                    "type": "number",
+                    "description": "The new lattitude coordinate of the fleet.",
+                    "example": 20.583748237438
+                  },
+                  "longitude": {
+                    "type": "number",
+                    "description": "The new longitude coordinate of the fleet.",
+                    "example": 20.583748237438
+                  },
+                  "timezone": {
+                    "type": "string",
+                    "description": "TZ database name. The timezone will be validated with the coordinates by frontend. API will not validate it.",
+                    "example": "+0100"
                   }
                 }
               }
             }
           }
         },
-        "summary": "Assign fleet's/fleetgroup to a customer/fleetgroup (Transfer)",
+        "summary": "Edit existing fleet",
         "responses": {
           "200": {
-            "description": "Successfully assigning the fleet/fleetgroup under a customer/fleetgroup.",
+            "description": "Successfully editing the fleet.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4711,7 +4796,7 @@
         }
       }
     },
-    "/fleet/{id}/editCoordinateTZ": {
+    "/{type}/{id}/changeParent": {
       "post": {
         "tags": [
           "fleet/fleetgroup"
@@ -4723,9 +4808,19 @@
         ],
         "parameters": [
           {
+            "name": "type",
+            "in": "path",
+            "description": "fleet or fleetgroup",
+            "example": "fleet",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
             "name": "id",
             "in": "path",
-            "description": "Fleet id that the user wants to change the coordinate or the timezone.",
+            "description": "Fleet id or fleetgroup id that the user wants to move parent.",
             "example": "123821738273",
             "required": true,
             "schema": {
@@ -4733,7 +4828,6 @@
             }
           }
         ],
-        "summary": "Update fleet's coordinate or timezone",
         "requestBody": {
           "required": true,
           "content": {
@@ -4741,29 +4835,25 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "lattitude": {
-                    "type": "number",
-                    "description": "The new lattitude coordinate of the fleet.",
-                    "example": 20.583748237438
+                  "isParentFleetgroup": {
+                    "type": "boolean",
+                    "description": "True if the fleet/fleetgroup will directly be under a Fleetgroup. False if it will directly be under a Customer.",
+                    "example": true
                   },
-                  "longitude": {
-                    "type": "number",
-                    "description": "The new longitude coordinate of the fleet.",
-                    "example": 20.583748237438
-                  },
-                  "timezone": {
+                  "parentId": {
                     "type": "string",
-                    "description": "TZ database name. The timezone will be validated with the coordinates by frontend. API will not validate it.",
-                    "example": "Europe/Stockholm"
+                    "description": "The fleetgroup ID (if isParentFleetgroup=True) or the customer ID (if isParentFleetgroup=False) of the new fleet/fleetgroup. The ID is retrieved from the customer Tree (see /customer endpoint).",
+                    "example": "s4dEGeH6t6DzJQjJ6"
                   }
                 }
               }
             }
           }
         },
+        "summary": "Assign fleet's/fleetgroup to a customer/fleetgroup (Transfer)",
         "responses": {
           "200": {
-            "description": "Successfully updating the fleet's coordinate or timezone",
+            "description": "Successfully assigning the fleet/fleetgroup under a customer/fleetgroup.",
             "content": {
               "application/json": {
                 "schema": {
