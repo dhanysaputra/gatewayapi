@@ -1225,7 +1225,7 @@
         }
       }
     },
-    "/bms/{mui}/logs/cycle": {
+    "/bms/{mui}/logs/history": {
       "get": {
         "tags": [
           "bms"
@@ -1312,7 +1312,7 @@
         }
       }
     },
-    "/bms/{mui}/logs/bmsevent": {
+    "/bms/{mui}/logs/event": {
       "get": {
         "tags": [
           "bms"
@@ -1362,93 +1362,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ResponseBMSEvent"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Unauthorized"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "ItemNotFound",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ItemNotFound"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "InternalServerError",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InternalServerError"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/bms/{mui}/logs/protective": {
-      "get": {
-        "tags": [
-          "bms"
-        ],
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ],
-        "parameters": [
-          {
-            "name": "mui",
-            "in": "path",
-            "description": "mui is the device's identifier, which could be either a MAC or an MUI.",
-            "example": "562959144425069",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "from",
-            "in": "query",
-            "description": "start date of the requested instant logs at 00:00:00",
-            "example": "2022-02-01T00:00:00.000Z",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "to",
-            "in": "query",
-            "description": "end date of the requested instant logs at 23:59:59",
-            "example": "2022-02-03T00:00:00.000Z",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "summary": "Get BMS's instant logs",
-        "responses": {
-          "200": {
-            "description": "Get the instant logs of a given MUI on the requested duration.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ResponseBMSProtective"
                 }
               }
             }
